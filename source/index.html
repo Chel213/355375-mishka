@@ -5,8 +5,107 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Профессиональный HTML и CSS</a>», уровень 2.</p>
-
+    <header class="main-header">
+      <div class="main-header__logo logo">
+        <a class="logo__link">
+          <img class="logo__img" src="img/" width="86" height="35" alt="logo-mishka">
+        </a>
+      </div>
+      <button class="main-header__control-popup" type="button">Открыть меню</button>
+    </header>
+    <nav class="main-navigation">
+      <ul class="site-navigation">
+        <li class="site-navigation__item"><a href="catalog.html">Каталог товаров</a></li>
+        <li class="site-navigation__item"><a href="#">Вязание на заказ</a></li>
+        <li class="site-navigation__item site-navigation__item--search"><a href="#">Поиск по сайту</a></li>
+        <li class="site-navigation__item site-navigation__item--cart"><a href="#">Корзина: пока пуста</a></li>
+      </ul>
+    </nav>
+    <main class="page-main">
+      <section class="site-description">
+        <h1 class="site-description__title">Милые штуки ручной работы для дома</h1>
+        <a class="site-description__link-left" href="#">Предметы интерьера</a>
+        <a class="site-description__link-right" href="#">Детские игрушки</a>
+      </section>
+      <section class="goods-week">
+        <h3 class="goods-week__name">Вязаные корзинки</h3>
+        <h2 class="goods-week__title">Товар недели</h2>
+        <p class="goods-week__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        <table class="goods-week__options">
+          <tr class="goods-week__options-row">
+            <td class="goods-week__options-data">Цвет:</td>
+            <td class="goods-week__options-data">"Тиффани"/серый</td>
+          </tr>
+          <tr class="goods-week__options-row">
+            <td class="goods-week__options-data">Диаметр:</td>
+            <td class="goods-week__options-data">25 см</td>
+          </tr>
+          <tr class="goods-week__options-row">
+            <td class="goods-week__options-data">Высота:</td>
+            <td class="goods-week__options-data">15 см</td>
+          </tr>
+        </table>
+        <img class="goods-week__image" src="" width="260" height="315" alt="Вязанные корзинки">
+        <p class="goods-week__price">Цена: 990 руб.</p>
+        <a class="goods-week__button button" href="#">Заказать</a>
+      </section>
+      <section class="features">
+        <h3 class="features__title">Коротко о нас:</h3>
+        <ul class="features__list">
+          <li class="features-list__item"><span class="features-list__img"></span>Экологически чистые материалы</li>
+          <li class="features-list__item"><span class="features-list__img"></span>Скандинавский стиль по российской цене</li>
+          <li class="features-list__item"><span class="features-list__img"></span>Увеличивает лайки на фотографиях</li>
+          <li class="features-list__item"><span class="features-list__img"></span>Связано вручную с любовью и умилением</li>
+          <li class="features-list__item"><span class="features-list__img"></span>Поддержка отечественного производителя</li>
+          <li class="features-list__item"><span class="features-list__img"></span>Поставляется в подарочной упаковке</li>
+        </ul>
+      </section>
+      <section class="reviews">
+        <h3 class="reviews__title">Отзывы</h3>
+        <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+        <p class="reviews__autor">Анастасия Красильникова</p>
+        <p class="reviews__autor-login">@misssssiskras</p>
+        <button class="reviews__toggle reviews__toggle--left" type="button">prev</button>
+        <button class="reviews__toggle reviews__toggle--right" type="button">next</button>
+        <a class="reviews__button button" href="#">Написать</a>
+      </section>
+      <section class="feedback">
+        <h3 class="feedback__title">Контакты</h3>
+        <span class="feedback__item">e-mail:</span>
+        <a class="feedback__value feedback__value--link" href="#">info@mimimishkashop.ru</a>
+        <span class="feedback__item">адрес:</span>
+        <span class="feedback__value">г.Санкт-Петербург, ул.Большая Конюшенная, д.19/8, офис 101</span>
+        <div class="feedback__map map"></div>
+        <a class="feedback__button button" href="#">напишите нам</a>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <div class="main-footer__social">
+        <a class="main-footer__instagram" href="#"><span class="visually-hidden">инстаграмм</span></a>
+        <a class="main-footer__facebook" href="#"><span class="visually-hidden">фейсбук</span></a>
+        <a class="main-footer__twitter" href="#"><span class="visually-hidden">Твитер</span></a>
+      </div>
+      <div class="main-footer__copyright">
+        <p class="main-footer__developed">Разработано</p>
+        <a class="main-footer__logo-htmlacademy" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/htmlacademy.svg" width="27" height="34"></a>
+      </div>
+    </footer>
+    <div class="modal-owerlay">
+      <div class="modal-owerlay modal">
+        <p class="modal__name">Добавить в корзину</p>
+        <p class="modal__size">Выберите размер</p>
+        <div class="modal__choice-size">
+          <form class="modal__form" action="http://echo.htmlacademy.ru" method="POST">
+            <input class="modal__form-input" type="radio" name="choice-size" id="size-s" value="s" checked>
+            <label class="modal__button-size" for="size-s">s</label>
+            <input class="modal__form-input" type="radio" name="choice-size" id="size-m" value="m">
+            <label class="modal__button-size" for="size-m">m</label>
+            <input class="modal__form-input" type="radio" name="choice-size" id="size-l" value="l">
+            <label class="modal__button-size" for="size-l">l</label>
+            <input class="modal__button" type="submit" value="Добавить">
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
