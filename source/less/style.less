@@ -1,3 +1,45 @@
-body {
-  background: white;
+@font-base: "Open Sans", "arial", sans-serif;
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensans.woff"),
+    url("../fonts/opensans.woff2");
+  font-weight: 400;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensansbold.woff"),
+    url("../fonts/opensansbold.woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@import "visually-hidden.less";
+
+body {
+  width: 320px;
+  padding: 0;
+  margin: 0;
+}
+
+.font-title-index {
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+}
+
+@import "main-header.less";
+@import "logo.less";
+@import "site-navigation.less";
+@import "site-description.less";
+@import "goods-week.less";
+@import "button.less";
+@import "features.less";
+@import "reviews.less";
+@import "feedback.less";
+@import "map.less";
+@import "main-footer";
+
