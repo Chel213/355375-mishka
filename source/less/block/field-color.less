@@ -1,0 +1,63 @@
+.field-color {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-color__name {
+  position: relative;
+  margin: 0;
+  margin-bottom: 27px;
+  .font(17px, 17px, 700);
+  color: #63d1bb;
+  text-transform: uppercase;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 198px;
+    height: 1px;
+    content: "";
+    background-color: #63d1bb;
+  }
+}
+
+.field-color__input {
+  display: none;
+}
+
+.field-color__input:checked + .field-color__label::after {
+  background: url("../img/icon-tick.svg") no-repeat center;
+}
+
+.field-color__label {
+  position: relative;
+  padding: 13px 40px;
+  padding-bottom: 35px;
+  padding-left: 60px;
+  .font(17px, 18px, 700);
+  color: #000000;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 40px;
+    height: 40px;
+    border: 2px solid #444444;
+  }
+
+  &::after {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    content: "";
+    width: 35px;
+    height: 30px;
+  }
+}
+
+.field-color__label:last-child {
+  padding-bottom: 13px;
+}
