@@ -4,10 +4,9 @@
 
 .main-header__logo {
   margin: auto 0;
-  padding: 22px 30px;
+  padding: 22px 0;
   border-top: 1px solid rgba(68, 68, 68, 0.1);
   border-bottom: 1px solid rgba(68, 68, 68, 0.1);
-  .color-temp(250, 0, 100);
 }
 
 .main-header__control-popup {
@@ -22,12 +21,28 @@
   cursor: pointer;
 }
 
+.main-header__delivery {
+  position: absolute;
+  bottom: 20px;
+  right: 50px;
+  display: none;
+  .font(15px, 24px);
+  color: #444444;
+  text-decoration: none;
+}
+
 @media (min-width: @tablet-width) {
   .main-header__control-popup {
     display: none;
   }
+
   .main-header__logo {
     position: absolute;
+    left: 50px;
     border: none;
+  }
+
+  .main-header__delivery {
+    display: block;
   }
 }
