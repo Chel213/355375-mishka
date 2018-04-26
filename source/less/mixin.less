@@ -11,6 +11,21 @@
   font-weight: @weight;
 }
 
+.btn (@width) {
+  display: block;
+  width: @width;
+  padding: 15px 5px;
+  font-family: @font-base;
+  .font(17px, 20px, 700);
+  color: #444444;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px solid #444444;
+}
+
 .color-temp (@r, @g, @b) {
   background-color: rgba(@r, @g, @b, 0.15);
 }
+
+
