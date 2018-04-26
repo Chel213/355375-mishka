@@ -9,7 +9,7 @@
   <body>
     <header class="main-header">
       <div class="main-header__logo logo">
-        <a class="logo__link" href="index.html">
+        <a class="logo__link">
           <img class="logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="logo-mishka">
         </a>
       </div>
@@ -23,7 +23,11 @@
           <li class="site-navigation__item site-navigation__item--search"><a class="site-navigation__link" href="#">Поиск по сайту</a></li>
           <li class="site-navigation__item site-navigation__item--cart"><a class="site-navigation__link" href="#">Корзина: пока пуста</a></li>
         </ul>
-        <a class="main-header__delivery" href="delivery.html">Бесплатная доставка по России</a>
+        <ul class="site-navigation__list site-navigation__list--additional">
+          <li class="site-navigation__item"><a class="site-navigation__link" href="#">Новые поступления</a> </li>
+          <li class="site-navigation__item"><a class="site-navigation__link" href="#">Распродажа</a> </li>
+        </ul>
+        <a class="site-navigation__delivery" href="delivery.html">Бесплатная доставка по России</a>
       </nav>
     </header>
     <main class="page-main">
@@ -80,12 +84,13 @@
       </form>
     </main>
     <footer class="main-footer">
-      <div class="main-footer__social social">
+      <img class="main-footer__logo" width="102px" height="34px" src="img/logo-mobile.svg" alt="logo-mishka">
+      <div class="main-footer__social social container">
         <a class="social__item social__item--instagram" href="#"><span class="visually-hidden">инстаграмм</span></a>
         <a class="social__item social__item--facebook" href="#"><span class="visually-hidden">фейсбук</span></a>
         <a class="social__item social__item--twitter" href="#"><span class="visually-hidden">Твитер</span></a>
       </div>
-      <div class="main-footer__copyright">
+      <div class="main-footer__copyright container">
         <p class="main-footer__developed">Разработано</p>
         <a class="main-footer__logo-htmlacademy" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/htmlacademy.svg" width="27" height="34" alt="logo-htmlacademy"></a>
       </div>
