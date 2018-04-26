@@ -1,8 +1,14 @@
+@import "social.less";
+
 .main-footer {
   display: flex;
   flex-direction: column;
   font-family: @font-base;
   background: #f1f1f1;
+}
+
+.main-footer__logo {
+  display: none;
 }
 
 .main-footer__social {
@@ -27,4 +33,19 @@
   .font(19px, 19px, 700);
 }
 
-@import "social.less";
+@media (min-width: @tablet-width) {
+  .main-footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .main-footer__logo {
+    display: block;
+  }
+
+  .main-footer__social {
+    border: none;
+  }
+}
+
