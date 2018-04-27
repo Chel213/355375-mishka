@@ -36,3 +36,24 @@
     color: rgba(68, 68, 68, 0.3);
   }
 }
+
+@media (min-width: @tablet-width) {
+  .field-email {
+    flex-direction: row;
+    padding-bottom: 30px;
+    align-items: baseline;
+  }
+
+  .field-email__name {
+    width: 167px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .field-email__input {
+    width: 500px;
+    background-position: 450px;
+  }
+}

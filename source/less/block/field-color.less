@@ -22,6 +22,11 @@
   }
 }
 
+.field-color__form {
+  display: flex;
+  flex-direction: column;
+}
+
 .field-color__input {
   display: none;
 }
@@ -60,4 +65,28 @@
 
 .field-color__label:last-child {
   padding-bottom: 13px;
+}
+
+@media (min-width: @tablet-width) {
+  .field-color {
+    flex-direction: row;
+  }
+
+  .field-color__name {
+    width: 167px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .field-color__form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 500px;
+  }
+
+  .field-color__label {
+    width: 214px;
+  }
 }
