@@ -1,4 +1,6 @@
 .feedback {
+  display: flex;
+  flex-direction: column;
   padding: 38px 0;
   font-family: @font-base;
 }
@@ -6,6 +8,7 @@
 .feedback__title {
   margin: 0;
   margin-bottom: 30px;
+  padding: 0 30px;
   .font(18px, 30px, 700);
   color: #000000;
 }
@@ -13,6 +16,7 @@
 .feedback__item-wrapper {
   display: flex;
   flex-wrap: wrap;
+  padding: 0 30px;
 }
 
 .feedback__item {
@@ -35,4 +39,65 @@
 
 .feedback__map {
   margin-bottom: 38px;
+}
+
+.feedback__button {
+  .btn(260px);
+}
+
+@media (min-width: @tablet-width) {
+  .feedback {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .feedback__title {
+    width: 100%;
+    .font(43px, 50px, 700);
+  }
+
+  .feedback__map {
+    width: 100%;
+  }
+
+  .feedback__item-wrapper {
+    align-self: flex-start;
+  }
+
+  .feedback__button {
+    margin-left: auto;
+    margin-right: auto;
+    .btn(230px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback {
+    position: relative;
+    flex-direction: column;
+    min-height: 457px;
+    margin-bottom: 30px;
+    padding: 0 100px;
+  }
+
+  .feedback__title {
+    padding-left: 175px;
+  }
+
+  .feedback__item-wrapper {
+    padding-left: 175px;
+  }
+
+  .feedback__map {
+    position: absolute;
+    width: 525px;
+    margin: 0;
+    right: 0;
+  }
+
+  .feedback__button {
+    margin: 0;
+    margin-left: 175px;
+    margin-top: auto;
+  }
 }

@@ -1,7 +1,7 @@
 .site-description {
   padding-top: 75px;
   font-family: @font-base;
-  background: #fbfbfb url("../img/hero-mobile@1x.jpg") no-repeat -125px -15px;
+  background: #fbfbfb url("../img/hero-mobile@1x.jpg") no-repeat 50% -15px;
 }
 
 .site-description__title {
@@ -10,6 +10,11 @@
   padding: 0 30px;
   text-align: center;
   .font(27px, 30px, 700);
+}
+
+.site-description__link {
+  display: flex;
+  flex-direction: column;
 }
 
 .site-description__link-left {
@@ -30,4 +35,44 @@
   color: #ffffff;
   text-decoration: none;
   background: #56c3b2 url("../img/icon-toy.svg") no-repeat 233px;
+}
+
+@media (min-width: @tablet-width) {
+  .site-description {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+    padding-top: 160px;
+    align-items: center;
+    background-position: 50% 90px;
+    background-size: contain;
+  }
+
+  .site-description__title {
+    width: 520px;
+    margin-bottom: 370px;
+    padding: 0;
+    .font(43px, 50px, 700);
+  }
+
+  .site-description__link {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 50px;
+  }
+
+  .site-description__link-left {
+    width: 50%;
+  }
+
+  .site-description__link-right {
+    width: 50%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-description__link {
+    padding: 0 100px;
+  }
 }

@@ -36,3 +36,25 @@
     color: rgba(68, 68, 68, 0.3);
   }
 }
+
+@media (min-width: @tablet-width) {
+  .field-tel {
+    flex-direction: row;
+    margin-bottom: 0;
+    padding-bottom: 30px;
+    align-items: baseline;
+  }
+
+  .field-tel__name {
+    width: 167px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .field-tel__input {
+    width: 500px;
+    background-position: 450px;
+  }
+}

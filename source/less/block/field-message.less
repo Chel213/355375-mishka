@@ -36,3 +36,21 @@
     color: rgba(68, 68, 68, 0.3);
   }
 }
+
+@media (min-width: @tablet-width) {
+  .field-message {
+    flex-direction: row;
+  }
+
+  .field-message__name {
+    width: 167px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .field-message__textarea {
+    width: 500px;
+  }
+}

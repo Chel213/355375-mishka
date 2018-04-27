@@ -22,6 +22,11 @@
   }
 }
 
+.field-name__form {
+  display: flex;
+  flex-direction: column;
+}
+
 .field-name__label {
   .font(17px, 18px, 700);
   color: #000000;
@@ -43,4 +48,22 @@
 
 .field-name__input:last-child {
   margin-bottom: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .field-name {
+    flex-direction: row;
+  }
+
+  .field-name__name {
+    width: 167px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .field-name__form {
+    width: 500px;
+  }
 }
