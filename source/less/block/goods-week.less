@@ -55,11 +55,6 @@
   padding-right: 30px;
 }
 
-.goods-week__image {
-  width: 260px;
-  height: 315px;
-}
-
 .goods-week__price {
   margin: 25px 0;
   margin-bottom: 25px;
@@ -74,13 +69,17 @@
 
 @media (min-width: @tablet-width) {
   .goods-week {
-    margin-bottom: 50px;
+    margin-bottom: 52px;
     padding: 0 50px;
+    padding-bottom: 65px;
+    background-position: bottom;
+    background-size: auto 14px;
   }
 
   .goods-week__container-name {
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 49px;
     align-items: flex-end;
     order: 1;
   }
@@ -88,11 +87,13 @@
   .goods-week__name {
     width: 500px;
     margin: 0;
+    .font(43px, 50px, 700);
   }
 
   .goods-week__title {
-    width: 120px;
+    width: 125px;
     margin: 0;
+    text-align: center;
   }
 
   .goods-week__container-description {
@@ -102,10 +103,17 @@
 
   .goods-week__description {
     width: 295px;
+    margin-bottom: 34px;
+    .font(17px, 30px);
   }
 
   .goods-week__options {
     width: 295px;
+    margin-bottom: 30px;
+  }
+
+  .goods-week__options-data:first-child {
+    width: 96px;
   }
 
   .goods-week__container-price {
@@ -113,9 +121,14 @@
     order: 3;
   }
 
+  .goods-week__price {
+    margin-bottom: 33px;
+    .font(20px, 24px, 700);
+  }
+
   .goods-week__image {
     position: absolute;
-    top: 0;
+    top: 9px;
     right: 0;
   }
 
