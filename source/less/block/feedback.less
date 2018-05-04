@@ -27,12 +27,13 @@
 }
 
 .feedback__value {
-  width: 180px;
+  width: 150px;
   .font(15px, 30px);
   color: #444444;
 }
 
 .feedback__value--link {
+  width: 180px;
   text-decoration: none;
   box-shadow: inset 0 -1px 0 0 #62d1ba;
 }
@@ -50,19 +51,51 @@
   .feedback {
     flex-direction: row;
     flex-wrap: wrap;
+    margin-bottom: 20px;
   }
 
   .feedback__title {
+    position: relative;
     width: 100%;
+    margin-bottom: 49px;
+    padding: 0 50px;
     .font(43px, 50px, 700);
+
+    &::after {
+      position: absolute;
+      right: 50px;
+      bottom: -19px;
+      width: 50px;
+      height: 85px;
+      content: "";
+      background: url("../img/icon-flag.svg") no-repeat;
+    }
   }
 
   .feedback__map {
     width: 100%;
+    margin-bottom: 54px;
   }
 
   .feedback__item-wrapper {
+    margin-bottom: 56px;
+    padding: 0;
+    padding-left: 50px;
     align-self: flex-start;
+  }
+
+  .feedback__item {
+    width: 77px;
+    .font(17px, 30px);
+  }
+
+  .feedback__value {
+    width: 257px;
+    .font(17px, 30px);
+  }
+
+  .feedback__value--link {
+    max-width: 205px;
   }
 
   .feedback__button {

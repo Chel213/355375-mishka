@@ -11,7 +11,7 @@
       <div class="main-header__logo logo">
         <a class="logo__link">
           <picture>
-            <source media="(min-width: 1250px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
               <img class="logo__img" src="img/logo-mobile.svg" alt="logo-mishka">
           </picture>
@@ -42,7 +42,7 @@
           <a class="site-description__link-right" href="catalog/toy.html">Детские игрушки</a>
         </div>
       </section>
-      <section class="goods-week container">
+      <section class="goods-week">
         <div class="goods-week__container-name">
           <h2 class="goods-week__name">Вязаные корзинки</h2>
           <h3 class="goods-week__title">Товар недели</h3>
@@ -63,14 +63,17 @@
               <td class="goods-week__options-data">15 см</td>
             </tr>
           </table>
-          <img class="goods-week__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязанные корзинки">
+          <picture class="goods-week__image">
+            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg">
+            <img src="img/triple-set-mobile@1x.jpg" alt="Вязанные корзинки">
+          </picture>
         </div>
         <div class="goods-week__container-price">
           <p class="goods-week__price">Цена: 990 руб.</p>
           <a class="goods-week__button" href="#">Заказать</a>
         </div>
       </section>
-      <section class="features container">
+      <section class="features">
         <h3 class="features__title">Коротко о нас:</h3>
         <ul class="features__list">
           <ul class="features__list--left">
@@ -85,7 +88,7 @@
           </ul>
         </ul>
       </section>
-      <section class="reviews container">
+      <section class="reviews">
         <h3 class="reviews__title">Отзывы</h3>
         <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
         <div class="reviews__autor--wrapper">
@@ -106,22 +109,23 @@
         </div>
         <div class="feedback__item-wrapper">
           <span class="feedback__item">адрес:</span>
-          <span class="feedback__value">г.Санкт-Петербург, ул.Большая Конюшенная, д.19/8, офис 101</span>
+          <span class="feedback__value">г.&#160;Санкт-Петербург, ул.&#160;Большая Конюшенная, д.&#160;19/8, офис 101</span>
         </div>
         <div class="feedback__map map"></div>
         <a class="feedback__button" href="feedback.html">напишите нам</a>
       </section>
     </main>
     <footer class="main-footer">
-      <img class="main-footer__logo" width="102px" height="34px" src="img/logo-mobile.svg" alt="logo-mishka">
-      <div class="main-footer__social social container">
+      <img class="main-footer__logo" width="102px" height="34px" src="img/logo-footer.svg" alt="logo-mishka">
+      <div class="main-footer__social social">
         <a class="social__item social__item--instagram" href="#"><span class="visually-hidden">инстаграмм</span></a>
         <a class="social__item social__item--facebook" href="#"><span class="visually-hidden">фейсбук</span></a>
         <a class="social__item social__item--twitter" href="#"><span class="visually-hidden">Твитер</span></a>
       </div>
-      <div class="main-footer__copyright container">
+      <div class="main-footer__copyright">
         <p class="main-footer__developed">Разработано</p>
-        <a class="main-footer__logo-htmlacademy" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/logo-htmlacademy.svg" width="27" height="34" alt="logo-htmlacademy"></a>
+        <a class="main-footer__logo-htmlacademy" href="https://htmlacademy.ru/intensive/adaptive">
+          <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="logo-htmlacademy"></a>
       </div>
     </footer>
     <div class="modal-overlay">
