@@ -129,37 +129,35 @@
 }
 
 @media (min-width: @desktop-width) {
-  .site-navigation {
-    margin: 0 50px;
-  }
-
   .site-navigation__list--main {
+    width: 400px;
+    padding-left: 15px;
+    border-bottom: 1px solid rgba(68, 68, 68, 0.1);
     order: 0;
 
     & .site-navigation__link {
-      padding: 27px 20px;
+      padding: 32px 35px;
       .font(17px, 24px, 700);
     }
   }
 
+  .site-navigation__item--catalog {
+    border-right: 1px solid rgba(68, 68, 68, 0.1);
+  }
+
   .site-navigation__list--user {
     width: 50%;
-    border: none;
   }
 
   .site-navigation__list--additional {
     display: flex;
     padding-left: 30px;
     order: 3;
-    border-top: 1px solid rgba(68, 68, 68, 0.1);
 
     & .site-navigation__link {
-      padding: 20px 20px;
+      padding: 17px 20px;
+      padding-right: 41px;
       .font(15px, 24px, 700);
     }
-  }
-
-  .site-navigation__delivery {
-    border-top: 1px solid rgba(68, 68, 68, 0.1);
   }
 }

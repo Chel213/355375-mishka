@@ -4,7 +4,7 @@
 
 .catalog__list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -14,18 +14,24 @@
 .catalog__item {
   display: flex;
   flex-direction: column;
+  width: 260px;
+  margin: 0 auto;
   margin-bottom: 30px;
-  border: 1px solid #ececec;
+  box-shadow: 0 0 0 1px #ececec;
 }
 
 .catalog__item-img {
   margin-bottom: 28px;
+
+  & img {
+    display: block;
+  }
 }
 
 .catalog__item-name {
   display: block;
-  margin-bottom: 8px;
-  padding-left: 28px;
+  margin-bottom: 4px;
+  padding: 0 28px;
   .font(17px, 24px, 700);
   color: #000000;
   text-decoration: none;
@@ -33,7 +39,7 @@
 
 .catalog__item-options {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   padding-left: 28px;
   .font(13px, 30px);
 }
@@ -42,8 +48,8 @@
   display: flex;
   align-items: center;
   margin: 0 28px;
-  margin-bottom: 30px;
-  padding-top: 22px;
+  margin-bottom: 26px;
+  padding-top: 21px;
   .font(15px, 24px, 700);
   border-top: 1px solid #ececec;
 }
@@ -71,30 +77,76 @@
 
   .catalog__item {
     flex-direction: row;
+    width: 100%;
+    margin-bottom: 52px;
+  }
+
+  .catalog__item-img {
+    margin-bottom: 0;
+
+    & img {
+      display: block;
+    }
+  }
+
+  .catalog__item-name {
+    margin-bottom: 5px;
+    padding-right: 70px;
+    .font(20px, 24px, 700);
+  }
+
+  .catalog__item-options {
+    padding: 0 28px;
+    .font(15px, 30px);
   }
 
   .catalog__item-description {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    padding-top: 25px;
   }
 
   .catalog__item-buy {
+
+    margin: 26px 31px;
     margin-top: auto;
+    padding-top: 22px;
+  }
+
+  .catalog__item-price {
+    .font(17px, 24px, 700);
   }
 }
 
 @media (min-width: @desktop-width) {
   .catalog {
-    margin-bottom: 50px;
+    max-width: 1150px;
+    margin: 0 auto;
+    margin-bottom: 58px;
   }
 
   .catalog__list {
     flex-direction: row;
+    margin-left: -25px;
   }
 
   .catalog__item {
     flex-direction: column;
     width: 316px;
-    margin: 0 26px;
+    margin: 0 25px;
+  }
+
+  .catalog__item-name {
+    padding-right: 50px;
+  }
+
+  .catalog__item-options {
+    margin-bottom: 15px;
+  }
+
+  .catalog__item-buy {
+    margin: 26px 28px;
+    margin-top: auto;
   }
 }

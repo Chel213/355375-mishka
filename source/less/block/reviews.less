@@ -118,19 +118,33 @@
 
 @media (min-width: @desktop-width) {
   .reviews {
-    padding: 0 100px;
-    background: url("../img/review@1x.jpg") no-repeat 100px;
+    margin-bottom: 73px;
+    padding: 70px 50px;
+    padding-bottom: 155px;
+    background: url("../img/review@1x.jpg") no-repeat 50px 0, url("../img/bg-zigzag-line.svg") repeat-x bottom;
+    background-size: 350px 457px, auto 20px;
   }
 
   .reviews__title {
     padding-left: 175px;
+    .font(53px, 57px, 700);
   }
 
   .reviews__text {
+    margin-bottom: 40px;
     padding-left: 175px;
+    padding-right: 100px;
   }
 
   .reviews__autor--wrapper {
     padding-left: 175px;
+  }
+
+  .reviews__autor {
+    .font(17px, 24px,700);
+  }
+
+  .reviews__button {
+    margin-top: 7px;
   }
 }

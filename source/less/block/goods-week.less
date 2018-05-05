@@ -140,16 +140,22 @@
 
 @media (min-width: @desktop-width) {
   .goods-week {
-    padding: 0 100px;
+    position: relative;
+    padding: 53px 50px;
+    padding-bottom: 92px;
+    background-size: auto 20px;
   }
 
   .goods-week__container-name {
     flex-direction: row-reverse;
     margin-right: auto;
+    .font(53px, 57px, 700);
   }
 
   .goods-week__title {
-    margin-right: 52px;
+    margin-left: 20px;
+    margin-right: 25px;
+    padding-bottom: 8px;
     .font(17px, 17px, 700);
   }
 
@@ -159,7 +165,22 @@
   }
 
   .goods-week__container-description {
+    position: static;
     margin-left: 175px;
+  }
+
+  .goods-week__description {
+    margin-bottom: 45px;
+  }
+
+  .goods-week__options {
+    margin-bottom: 84px;
+  }
+
+  .goods-week__image {
+    top: 0;
+    right: 50px;
+    z-index: -1;
   }
 
   .goods-week__container-price {

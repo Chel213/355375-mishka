@@ -1,11 +1,14 @@
-.page-title__name {
+.page-title {
+  background-color: #f1f1f1;
+}
 
+.page-title__name {
   margin: 0;
   margin-bottom: 30px;
-  padding: 73px 30px;
+  padding: 70px 30px;
+  padding-bottom: 74px;
   .font(27px, 30px, 700);
   text-align: center;
-  background: #f1f1f1;
 }
 
 .page-title__description {
@@ -15,11 +18,34 @@
 }
 
 @media (min-width: @tablet-width) {
+  .page-title {
+    margin-top: -60px;
+    margin-bottom: 66px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: auto 23px;
+  }
+
   .page-title__name {
+    margin-bottom: 0;
+    padding: 94px 30px;
     .font(43px, 50px, 700);
   }
 
   .page-title__description {
     .font(17px, 30px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-title {
+    margin-bottom: 113px;
+    background-size: auto 34px;
+  }
+
+  .page-title__name {
+    padding-bottom: 118px;
+    .font(53px, 57px, 700);
   }
 }

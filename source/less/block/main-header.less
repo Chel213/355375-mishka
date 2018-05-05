@@ -22,13 +22,19 @@
 }
 
 @media (min-width: @tablet-width) {
+  .main-header {
+    z-index: 1;
+  }
+
   .main-header__control-popup {
     display: none;
   }
 
   .main-header__logo {
     position: absolute;
+    top: 22px;
     left: 50px;
+    padding: 0;
     border: none;
   }
 }
@@ -36,6 +42,7 @@
 @media (min-width: @desktop-width) {
   .main-header__logo {
     left: 50%;
-    margin-left: -43px;
+    top: 8px;
+    margin-left: -74px;
   }
 }
