@@ -1,13 +1,14 @@
 .features {
   display: flex;
   flex-direction: column;
-  padding: 30px 30px;
-  padding-top: 27px;
+  padding: 27px 30px;
+  padding-bottom: 5px;
   font-family: @font-base;
 }
 
 .features__title {
   margin: 0;
+  margin-bottom: 28px;
   .font-title-index;
 }
 
@@ -28,44 +29,45 @@
 }
 
 .features__item {
-  padding-top: 83px;
+  margin-bottom: 23px;
+  padding-top: 60px;
   .font(17px, 20px, 700);
   color: #000000;
 }
 
 .features__item--ecology {
-  background: url("../img/icon-feature-flower.svg") no-repeat 10px 30px;
+  background: url("../img/icon-feature-flower.svg") no-repeat 8px 5px;
 }
 
 
 .features__item--style {
-  background: url("../img/icon-feature-money.svg") no-repeat 2px 30px;
+  background: url("../img/icon-feature-money.svg") no-repeat 0 5px;
 }
 
 .features__item--like {
-  background: url("../img/icon-feature-heart.svg") no-repeat 10px 35px;
+  background: url("../img/icon-feature-heart.svg") no-repeat 8px 10px;
 }
 
 .features__item--ball {
-  background: url("../img/icon-feature-ball.svg") no-repeat 5px 35px;
+  background: url("../img/icon-feature-ball.svg") no-repeat 5px 10px;
 }
 
 .features__item--rocket {
-  background: url("../img/icon-feature-rocket.svg") no-repeat 0 35px;
+  background: url("../img/icon-feature-rocket.svg") no-repeat 0 10px;
 }
 
 .features__item--box {
-  background: url("../img/icon-feature-gift.svg") no-repeat 5px 35px;
+  background: url("../img/icon-feature-gift.svg") no-repeat 3px 10px;
 }
 
 @media (min-width: @tablet-width) {
   .features {
-    margin-bottom: 56px;
+    margin-bottom: 31px;
     padding: 0 50px;
   }
 
   .features__title {
-    margin-bottom: 18px;
+    margin-bottom: 42px;
     .font(43px, 50px, 700);
   }
 
@@ -92,11 +94,15 @@
 
 @media (min-width: @desktop-width) {
   .features {
-    padding: 10px 225px;
-    margin-bottom: 55px;
+    padding: 10px 220px;
+    margin-bottom: 30px;
   }
 
   .features__title {
     .font(53px, 57px, 700);
+  }
+
+  .features__list--left {
+    padding-left: 5px;
   }
 }

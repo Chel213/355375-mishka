@@ -6,7 +6,7 @@
 .field-tel__name {
   position: relative;
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 3px;
   .font(17px, 17px, 700);
   color: #63d1bb;
   text-transform: uppercase;
@@ -15,7 +15,7 @@
     position: absolute;
     right: 0;
     top: 50%;
-    width: 198px;
+    width: ~"calc(100% - 62px)";
     height: 1px;
     content: "";
     background-color: #63d1bb;
@@ -24,15 +24,16 @@
 
 .field-tel__input {
   padding: 16px 0;
+  padding-top: 20px;
   padding-right: 45px;
-  .font(19px, 19px, 400);
+  .font(17px, 18px, 400);
   color: #444444;
-  background: url("../img/icon-phone.svg") no-repeat 220px 15px;
+  background: url("../img/icon-phone.svg") no-repeat 97% 15px;
   border: none;
   border-bottom: 2px solid #000000;
 
   &::placeholder {
-    .font(19px, 19px, 400);
+    .font(17px, 18px);
     color: rgba(68, 68, 68, 0.3);
   }
 }
@@ -41,7 +42,8 @@
   .field-tel {
     flex-direction: row;
     margin-bottom: 0;
-    padding-bottom: 30px;
+    padding-top: 46px;
+    padding-bottom: 26px;
     align-items: baseline;
   }
 
@@ -55,6 +57,26 @@
 
   .field-tel__input {
     width: 500px;
-    background-position: 450px;
+    padding-bottom: 16px;
+    padding-left: 18px;
+    padding-right: 10%;
+    background-position: 95%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .field-tel {
+    align-items: center;
+  }
+
+  .field-tel__name {
+    width: 175px;
+    margin: 0;
+    padding-left: 62px;
+  }
+
+  .field-tel__input {
+    width: 700px;
+    background-position: 99%;
   }
 }

@@ -1,70 +1,123 @@
 .form {
   display: flex;
   flex-direction: column;
+  margin-top: 23px;
   margin-bottom: 55px;
 }
 
 .form__field-type {
-  margin-bottom: 34px;
+  margin-bottom: 28px;
+  padding: 0 30px;
 }
 
 .form__field-color {
-  margin-bottom: 34px;
+  margin-bottom: 27px;
+  padding: 0 30px;
 }
 
 .form__name {
-  margin-bottom: 34px;
+  margin-bottom: 8px;
+  padding: 0 30px;
 }
 
 .form__tel {
-  margin-bottom: 34px;
+  margin-bottom: 31px;
+  padding: 0 30px;
 }
 
 .form__email {
-  margin-bottom: 34px;
+  margin-bottom: 30px;
+  padding: 0 30px;
 }
 
 .form__message {
-  margin-bottom: 18px;
+  margin-bottom: 16px;
+  padding: 0 30px;
 }
 
 .form__submit {
   display: flex;
   flex-direction: column;
+  padding: 0 30px;
 }
 
 .form__note {
   margin: 0;
-  margin-bottom: 31px;
+  margin-bottom: 30px;
   .font(14px, 16px);
   color: #444444;
 }
 
 .form__submit-button {
+  align-self: center;
   .btn(260px);
 }
 
 @media (min-width: @tablet-width) {
-  .form__submit {
-    flex-direction: row-reverse;
-    justify-content: space-between;
+  .form {
+    margin-bottom: 50px;
+  }
+
+  .form__field-type {
+    margin-bottom: 25px;
+    padding: 0 50px;
   }
 
   .form__field-color {
     background: #f1f1f1;
+    padding: 0 50px;
+  }
+
+  .form__name {
+    margin-bottom: 27px;
+    padding: 0 50px;
   }
 
   .form__tel {
+    padding: 0 50px;
     background: #f1f1f1;
   }
 
   .form__email {
+    padding: 0 50px;
+    margin-bottom: 50px;
     background: #f1f1f1;
+  }
+
+  .form__message {
+    padding: 0 50px;
+    margin-bottom: 52px;
+  }
+
+  .form__submit {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0 50px;
+  }
+
+  .form__submit-button {
+    .btn(230px);
+  }
+
+  .form__note {
+    margin: 0;
+    padding-top: 10px;
+    .font(17px, 30px);
   }
 }
 
 @media (min-width: @desktop-width) {
+  .form {
+    margin-top: 56px;
+    margin-bottom: 50px;
+  }
+
+  .form__message {
+    margin-bottom: 49px;
+  }
+
   .form__submit {
-    flex-direction: row;
+    flex-direction: row-reverse;
+    padding: 0 225px;
   }
 }

@@ -8,7 +8,7 @@
 
 .feedback__title {
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 25px;
   padding: 0 30px;
   .font(18px, 30px, 700);
   color: #000000;
@@ -17,7 +17,7 @@
 .feedback__item-wrapper {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 33px;
+  margin-bottom: 30px;
   padding: 0 30px;
 }
 
@@ -40,6 +40,7 @@
 }
 
 .feedback__map {
+  margin-top: 8px;
   margin-bottom: 40px;
 }
 
@@ -75,6 +76,7 @@
 
   .feedback__map {
     width: 100%;
+    margin-top: 0;
     margin-bottom: 54px;
   }
 
@@ -118,6 +120,16 @@
   .feedback__title {
     padding-left: 170px;
     .font(53px, 57px, 700);
+
+    &::after {
+      position: absolute;
+      left: 63px;
+      bottom: -19px;
+      width: 50px;
+      height: 85px;
+      content: "";
+      background: url("../img/icon-flag.svg") no-repeat;
+    }
   }
 
   .feedback__item-wrapper {
