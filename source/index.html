@@ -9,31 +9,33 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="main-header__logo logo">
-        <a class="logo__link">
-          <picture>
-            <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-              <img class="logo__img" src="img/logo-mobile.svg" alt="logo-mishka">
-          </picture>
-        </a>
+      <div class="main-header__container">
+        <div class="main-header__logo logo">
+          <a class="logo__link">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="logo__img" src="img/logo-mobile.svg" alt="logo-mishka">
+            </picture>
+          </a>
+        </div>
+        <button class="main-header__control-popup" type="button" aria-label="Меню"></button>
+        <nav class="site-navigation">
+          <ul class="site-navigation__list site-navigation__list--main">
+            <li class="site-navigation__item site-navigation__item--catalog"><a class="site-navigation__link" href="catalog.html">Каталог товаров</a></li>
+            <li class="site-navigation__item site-navigation__item--to-order"><a class="site-navigation__link" href="form.html">Вязание на заказ</a></li>
+          </ul>
+          <ul class="site-navigation__list site-navigation__list--user">
+            <li class="site-navigation__item site-navigation__item--search"><a class="site-navigation__link" href="#">Поиск по сайту</a></li>
+            <li class="site-navigation__item site-navigation__item--cart"><a class="site-navigation__link" href="#">Корзина: пока пуста</a></li>
+          </ul>
+          <ul class="site-navigation__list site-navigation__list--additional">
+            <li class="site-navigation__item"><a class="site-navigation__link" href="#">Новые поступления</a> </li>
+            <li class="site-navigation__item"><a class="site-navigation__link" href="#">Распродажа</a> </li>
+          </ul>
+          <a class="site-navigation__delivery" href="delivery.html">Бесплатная доставка по России</a>
+        </nav>
       </div>
-      <button class="main-header__control-popup" type="button" aria-label="Меню"></button>
-      <nav class="site-navigation">
-        <ul class="site-navigation__list site-navigation__list--main">
-          <li class="site-navigation__item site-navigation__item--catalog"><a class="site-navigation__link" href="catalog.html">Каталог товаров</a></li>
-          <li class="site-navigation__item site-navigation__item--to-order"><a class="site-navigation__link" href="form.html">Вязание на заказ</a></li>
-        </ul>
-        <ul class="site-navigation__list site-navigation__list--user">
-          <li class="site-navigation__item site-navigation__item--search"><a class="site-navigation__link" href="#">Поиск по сайту</a></li>
-          <li class="site-navigation__item site-navigation__item--cart"><a class="site-navigation__link" href="#">Корзина: пока пуста</a></li>
-        </ul>
-        <ul class="site-navigation__list site-navigation__list--additional">
-          <li class="site-navigation__item"><a class="site-navigation__link" href="#">Новые поступления</a> </li>
-          <li class="site-navigation__item"><a class="site-navigation__link" href="#">Распродажа</a> </li>
-        </ul>
-        <a class="site-navigation__delivery" href="delivery.html">Бесплатная доставка по России</a>
-      </nav>
     </header>
     <main class="page-main">
       <section class="site-description">
@@ -118,16 +120,18 @@
       </section>
     </main>
     <footer class="main-footer">
-      <img class="main-footer__logo" width="102" height="34" src="img/logo-footer.svg" alt="logo-mishka">
-      <div class="main-footer__social social">
-        <a class="social__item social__item--instagram" href="#"><span class="visually-hidden">инстаграмм</span></a>
-        <a class="social__item social__item--facebook" href="#"><span class="visually-hidden">фейсбук</span></a>
-        <a class="social__item social__item--twitter" href="#"><span class="visually-hidden">Твитер</span></a>
+      <div class="main-footer__container">
+        <img class="main-footer__logo" width="102" height="34" src="img/logo-footer.svg" alt="logo-mishka">
+        <div class="main-footer__social social">
+          <a class="social__item social__item--instagram" href="#"><span class="visually-hidden">инстаграмм</span></a>
+          <a class="social__item social__item--facebook" href="#"><span class="visually-hidden">фейсбук</span></a>
+          <a class="social__item social__item--twitter" href="#"><span class="visually-hidden">Твитер</span></a>
+        </div>
+        <a class="main-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
+          <p class="main-footer__developed">Разработано</p>
+          <img class="main-footer__logo-htmlacademy" src="img/logo-htmlacademy.svg" width="27" height="34" alt="logo-htmlacademy">
+        </a>
       </div>
-      <a class="main-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
-        <p class="main-footer__developed">Разработано</p>
-        <img class="main-footer__logo-htmlacademy" src="img/logo-htmlacademy.svg" width="27" height="34" alt="logo-htmlacademy">
-      </a>
     </footer>
     <div class="modal-overlay">
       <div class="modal-window">
