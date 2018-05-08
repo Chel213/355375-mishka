@@ -35,6 +35,17 @@
     .font(17px, 18px);
     color: rgba(68, 68, 68, 0.3);
   }
+
+  &:hover,
+  &:focus {
+    border-color: #62d1ba;
+    outline: none;
+  }
+
+  &:active {
+    border-color: #62d1ba;
+    outline: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -53,8 +64,11 @@
 
   .field-message__textarea {
     width: 500px;
+    font-family: @font-base;
+    .font(19px, 19px);
 
     &::placeholder {
+      font-family: @font-base;
       .font(19px, 18px);
     }
   }

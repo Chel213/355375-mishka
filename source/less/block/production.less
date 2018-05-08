@@ -1,10 +1,21 @@
 .production {
   display: flex;
   flex-direction: column;
-  width: 262px;
+  width: 260px;
   margin: 0 auto;
-  margin-bottom: 58px;
-  border: 1px solid #ececec;
+  margin-bottom: 60px;
+  box-shadow: inset 0 0 0 1px #ececec;
+
+  &:hover,
+  &:focus {
+    box-shadow: inset 0 0 0 1px #ececec,
+      0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: inset 0 0 0 1px #ececec,
+      0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 .production__title {
@@ -29,11 +40,21 @@
   background: none;
   border: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(1);
+    opacity: 0.3;
+  }
 }
 
 .production__video-description {
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 25px;
   padding: 0 34px;
   .font(13px, 24px);
   color: #444444;

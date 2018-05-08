@@ -1,10 +1,13 @@
 @import "social.less";
 
 .main-footer {
-  display: flex;
-  flex-direction: column;
   font-family: @font-base;
   background: #f1f1f1;
+}
+
+.main-footer__container {
+  display: flex;
+  flex-direction: column;
 }
 
 .main-footer__logo {
@@ -42,7 +45,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .main-footer {
+  .main-footer__container {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
@@ -75,6 +78,11 @@
 }
 
 @media (min-width: @desktop-width) {
+  .main-footer__container {
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+
   .main-footer__social {
     margin-left: 330px;
   }

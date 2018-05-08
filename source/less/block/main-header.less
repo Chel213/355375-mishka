@@ -1,5 +1,6 @@
-.main-header {
+.main-header__container {
   position: relative;
+  z-index: 1;
 }
 
 .main-header__logo {
@@ -40,6 +41,11 @@
 }
 
 @media (min-width: @desktop-width) {
+  .main-header__container {
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+
   .main-header__logo {
     left: 50%;
     top: 8px;
