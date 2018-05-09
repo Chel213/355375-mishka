@@ -11,12 +11,12 @@
   font-weight: @weight;
 }
 
-.btn (@width) {
+.btn (@width, @font-size-btn: 17px) {
   display: block;
   width: @width;
   padding: 14px 5px;
   font-family: @font-base;
-  .font(17px, 20px, 700);
+  .font(@font-size-btn, 20px, 700);
   color: #444444;
   text-decoration: none;
   text-align: center;

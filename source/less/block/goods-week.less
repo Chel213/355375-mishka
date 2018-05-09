@@ -56,9 +56,12 @@
 }
 
 .goods-week__image {
-  & img {
-    width: 260px;
-  }
+  width: 260px;
+  margin: 0 auto;
+}
+
+.goods-week__container-price {
+  margin: 0 auto;
 }
 
 .goods-week__price {
@@ -124,6 +127,7 @@
 
   .goods-week__container-price {
     width: 295px;
+    margin: 0;
     order: 3;
   }
 
@@ -137,6 +141,7 @@
     position: absolute;
     top: 9px;
     right: 0;
+    width: 333px;
   }
 
   .goods-week__button {
@@ -147,6 +152,9 @@
 @media (min-width: @desktop-width) {
   .goods-week {
     position: relative;
+    max-width: @desktop-width;
+    margin: 0 auto;
+    margin-bottom: 52px;
     padding: 53px 50px;
     padding-bottom: 95px;
     background-size: auto 20px;
@@ -186,6 +194,7 @@
   .goods-week__image {
     top: 0;
     right: 50px;
+    width: 525px;
     z-index: -1;
   }
 

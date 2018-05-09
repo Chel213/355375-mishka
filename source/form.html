@@ -43,60 +43,71 @@
         <p class="page-title__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       </section>
       <form class="form" action="http://echo.htmlacademy.ru" method="POST">
-        <div class="form__field-type field-type">
-          <p class="field-type__name">Тип</p>
-          <div class="field-type__form">
-            <input class="field-type__input" type="radio" name="type" id="field-type-accessory" value="accessory" checked>
-            <label class="field-type__label" for="field-type-accessory">Аксессуар для интерьера</label>
-            <input class="field-type__input" type="radio" name="type" id="field-type-toy" value="toy">
-            <label class="field-type__label" for="field-type-toy">Детская игрушка</label>
-          </div>
-        </div>
-        <div class="form__field-color field-color">
-          <p class="field-color__name">Цвет</p>
-          <div class="field-color__form">
-            <input class="field-color__input" type="checkbox" name="white" id="field-color-white" checked>
-            <label class="field-color__label" for="field-color-white">Белый</label>
-            <input class="field-color__input" type="checkbox" name="gray" id="field-color-gray" checked>
-            <label class="field-color__label" for="field-color-gray">Серый</label>
-            <input class="field-color__input" type="checkbox" name="tiffany" id="field-color-tiffany">
-            <label class="field-color__label" for="field-color-tiffany">«Тиффани»</label>
-            <input class="field-color__input" type="checkbox" name="black" id="field-color-black">
-            <label class="field-color__label" for="field-color-black">Черный</label>
-            <input class="field-color__input" type="checkbox" name="pink" id="field-color-pink">
-            <label class="field-color__label" for="field-color-pink">Розовый</label>
-            <input class="field-color__input" type="checkbox" name="orange" id="field-color-orange">
-            <label class="field-color__label" for="field-color-orange">Оранжевый</label>
-          </div>
-        </div>
-        <div class="form__name field-name">
-          <p class="field-name__name">Фио</p>
-          <div class="field-name__form">
-            <div class="field-name__wrapper">
-              <label class="field-name__label" for="field-name-name">Имя:</label>
-              <input class="field-name__input" type="text" name="name" id="field-name-name" placeholder="Введите ваше имя*" required>
-            </div>
-            <div class="field-name__wrapper">
-              <label class="field-name__label" for="field-name-surname">Фамилия:</label>
-              <input class="field-name__input" type="text" name="surname" id="field-name-surname" placeholder="Укажите фамилию*" required>
-            </div>
-            <div class="field-name__wrapper">
-              <label class="field-name__label" for="field-name-patronymic">Отчество:</label>
-              <input class="field-name__input" type="text" name="patronymic" id="field-name-patronymic" placeholder="Отчество, если желаете">
+        <div class="form__field-type">
+          <div class="field-type">
+            <p class="field-type__name">Тип</p>
+            <div class="field-type__form">
+              <input class="field-type__input" type="radio" name="type" id="field-type-accessory" value="accessory" checked>
+              <label class="field-type__label" for="field-type-accessory">Аксессуар для интерьера</label>
+              <input class="field-type__input" type="radio" name="type" id="field-type-toy" value="toy">
+              <label class="field-type__label" for="field-type-toy">Детская игрушка</label>
             </div>
           </div>
         </div>
-        <div class="form__tel field-tel">
-          <p class="field-tel__name">Тел</p>
-          <input class="field-tel__input" type="tel" name="phone" id="field-tel-phone" placeholder="+7 ХХХ ХХ ХХ*" required>
+        <div class="form__field-color">
+          <div class="field-color">
+            <p class="field-color__name">Цвет</p>
+            <div class="field-color__form">
+              <input class="field-color__input" type="checkbox" name="white" id="field-color-white" checked>
+              <label class="field-color__label" for="field-color-white">Белый</label>
+              <input class="field-color__input" type="checkbox" name="gray" id="field-color-gray" checked>
+              <label class="field-color__label" for="field-color-gray">Серый</label>
+              <input class="field-color__input" type="checkbox" name="tiffany" id="field-color-tiffany">
+              <label class="field-color__label" for="field-color-tiffany">«Тиффани»</label>
+              <input class="field-color__input" type="checkbox" name="black" id="field-color-black">
+              <label class="field-color__label" for="field-color-black">Черный</label>
+              <input class="field-color__input" type="checkbox" name="pink" id="field-color-pink">
+              <label class="field-color__label" for="field-color-pink">Розовый</label>
+              <input class="field-color__input" type="checkbox" name="orange" id="field-color-orange">
+              <label class="field-color__label" for="field-color-orange">Оранжевый</label>
+            </div>
+          </div>
         </div>
-        <div class="form__email field-email">
-          <p class="field-email__name">E-mail</p>
-          <input class="field-email__input" type="email" name="email" id="field-email" placeholder="Ваш Email*" required>
+        <div class="form__name">
+          <div class="field-name">
+            <p class="field-name__name">Фио</p>
+            <div class="field-name__form">
+              <div class="field-name__wrapper">
+                <label class="field-name__label" for="field-name-name">Имя:</label>
+                <input class="field-name__input" type="text" name="name" id="field-name-name" placeholder="Введите ваше имя*" required>
+              </div>
+              <div class="field-name__wrapper">
+                <label class="field-name__label" for="field-name-surname">Фамилия:</label>
+                <input class="field-name__input" type="text" name="surname" id="field-name-surname" placeholder="Укажите фамилию*" required>
+              </div>
+              <div class="field-name__wrapper">
+                <label class="field-name__label" for="field-name-patronymic">Отчество:</label>
+                <input class="field-name__input" type="text" name="patronymic" id="field-name-patronymic" placeholder="Отчество, если желаете">
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="form__message field-message">
-          <p class="field-message__name">Доп</p>
-          <textarea class="field-message__textarea" name="message" id="field-message" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        <div class="form__tel">
+          <div class="field-tel"><p class="field-tel__name">Тел</p>
+            <input class="field-tel__input" type="tel" name="phone" id="field-tel-phone" placeholder="+7 ХХХ ХХ ХХ*" required>
+          </div>
+        </div>
+        <div class="form__email">
+          <div class="field-email">
+            <p class="field-email__name">E-mail</p>
+            <input class="field-email__input" type="email" name="email" id="field-email" placeholder="Ваш Email*" required>
+          </div>
+        </div>
+        <div class="form__message">
+          <div class="field-message">
+            <p class="field-message__name">Доп</p>
+            <textarea class="field-message__textarea" name="message" id="field-message" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          </div>
         </div>
         <div class="form__submit">
           <p class="form__note">*Поля обязательны для заполнения</p>
