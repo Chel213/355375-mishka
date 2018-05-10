@@ -3,6 +3,10 @@
   flex-direction: column;
 }
 
+.site-navigation.close {
+  display: none;
+}
+
 .site-navigation__list {
   display: flex;
   flex-direction: column;
@@ -52,8 +56,13 @@
 
 @media (min-width: @tablet-width) {
   .site-navigation {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .site-navigation.close {
+    display: flex;
   }
 
   .site-navigation__list {

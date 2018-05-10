@@ -11,6 +11,7 @@
 }
 
 .main-header__control-popup {
+  display: none;
   position: absolute;
   top: 30px;
   right: 30px;
@@ -18,8 +19,17 @@
   height: 21px;
   padding: 0;
   border: none;
-  background: url("../img/icon-menu-close.svg") no-repeat;
   cursor: pointer;
+}
+
+.main-header__control-popup.close {
+  display: block;
+  background: url("../img/icon-menu-close.svg") no-repeat;
+}
+
+.main-header__control-popup.open {
+  display: block;
+  background: url("../img/icon-menu-open.svg") no-repeat;
 }
 
 @media (min-width: @tablet-width) {
@@ -27,7 +37,9 @@
     z-index: 1;
   }
 
-  .main-header__control-popup {
+  .main-header__control-popup,
+  .main-header__control-popup.close,
+  .main-header__control-popup.open {
     display: none;
   }
 
