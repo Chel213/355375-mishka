@@ -1,9 +1,11 @@
 .modal-window {
   position: fixed;
   top: 25%;
-  left: 0;
+  left: ~"calc(50% - 160px)";
+  display: flex;
+  flex-direction: column;
   width: 320px;
-  padding: 35px 30px;
+  padding: 30px 30px;
   font-family: @font-base;
   background-color: rgba(255, 255, 255, 1);
   border: 1px solid #c6c6c6;
@@ -15,7 +17,7 @@
 .modal-window__name {
   width: 160px;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   padding: 0;
   text-align: center;
   .font(25px, 30px, 700);
@@ -24,7 +26,7 @@
 
 .modal-window__size {
   margin: 0 auto;
-  margin-bottom: 27px;
+  margin-bottom: 23px;
   text-align: center;
   .font(15px, 30px);
 }
@@ -33,6 +35,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 17px;
 }
 
 .modal-window__form-input {
@@ -46,7 +49,7 @@
 .modal-window__button-size {
   width: 80px;
   margin-bottom: 30px;
-  padding: 18px 0;
+  padding: 16px 0;
   .font(17px, 17px, 700);
   text-transform: uppercase;
   text-align: center;
@@ -62,3 +65,35 @@
   background: #63d1bb;
   border: none;
 }
+
+@media (min-width: @tablet-width) {
+  .modal-window {
+    left: ~"calc(50% - 283px)";
+    width: 566px;
+    padding: 34px 30px;
+  }
+
+  .modal-window__name {
+    width: 380px;
+    .font(30px, 57px, 700);
+  }
+
+  .modal-window__size {
+    .font(17px, 30px);
+  }
+
+  .modal-window__choice-size {
+    width: 350px;
+    margin: 0 auto;
+  }
+
+  .modal-window__button-size {
+    width: 112px;
+  }
+
+  .modal-window__button {
+    width: 100%;
+  }
+}
+
+
