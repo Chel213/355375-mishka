@@ -6,7 +6,7 @@
 .field-message__name {
   position: relative;
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 25px;
   .font(17px, 17px, 700);
   color: #63d1bb;
   text-transform: uppercase;
@@ -15,7 +15,7 @@
     position: absolute;
     right: 0;
     top: 50%;
-    width: 198px;
+    width: ~"calc(100% - 62px)";
     height: 1px;
     content: "";
     background-color: #63d1bb;
@@ -23,17 +23,28 @@
 }
 
 .field-message__textarea {
-  height: 110px;
-  padding: 16px 17px;
-  padding-right: 45px;
-  .font(19px, 19px, 400);
+  height: 142px;
+  padding: 14px 15px;
+  .font(17px, 18px);
   color: #444444;
   border: 2px solid #000000;
   resize: none;
 
   &::placeholder {
-    .font(19px, 19px, 400);
+    font-family: @font-base;
+    .font(17px, 18px);
     color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:hover,
+  &:focus {
+    border-color: #62d1ba;
+    outline: none;
+  }
+
+  &:active {
+    border-color: #62d1ba;
+    outline: none;
   }
 }
 
@@ -44,6 +55,7 @@
 
   .field-message__name {
     width: 167px;
+    padding-top: 17px;
 
     &::after {
       display: none;
@@ -52,5 +64,31 @@
 
   .field-message__textarea {
     width: 500px;
+    font-family: @font-base;
+    .font(19px, 19px);
+
+    &::placeholder {
+      font-family: @font-base;
+      .font(19px, 18px);
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .field-message {
+    max-width: @desktop-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .field-message__name {
+    width: 175px;
+    padding-left: 62px;
+  }
+
+  .field-message__textarea {
+    width: 700px;
   }
 }

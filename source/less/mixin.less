@@ -11,18 +11,28 @@
   font-weight: @weight;
 }
 
-.btn (@width) {
+.btn (@width, @font-size-btn: 17px) {
   display: block;
   width: @width;
-  padding: 15px 5px;
+  padding: 14px 5px;
   font-family: @font-base;
-  .font(17px, 20px, 700);
+  .font(@font-size-btn, 20px, 700);
   color: #444444;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
   background-color: #ffffff;
   border: 2px solid #444444;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: #444444;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .color-temp (@r, @g, @b) {

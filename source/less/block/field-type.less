@@ -6,7 +6,7 @@
 .field-type__name {
   position: relative;
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 25px;
   .font(17px, 17px, 700);
   color: #63d1bb;
   text-transform: uppercase;
@@ -15,7 +15,7 @@
     position: absolute;
     right: 0;
     top: 50%;
-    width: 198px;
+    width: ~"calc(100% - 62px)";
     height: 1px;
     content: "";
     background-color: #63d1bb;
@@ -37,7 +37,9 @@
 
 .field-type__label {
   position: relative;
-  padding: 13px 40px;
+  width: 260px;
+  padding: 10px 40px;
+  padding-bottom: 14px;
   padding-left: 60px;
   .font(17px, 18px, 700);
   color: #000000;
@@ -55,12 +57,21 @@
 
   &::after {
     position: absolute;
-    top: 14px;
-    left: 14px;
+    top: 12px;
+    left: 12px;
     content: "";
     width: 16px;
     height: 16px;
     border-radius: 50%;
+  }
+
+  &:hover::before,
+  &:hover::before {
+    border-color: #62d1ba;
+  }
+
+  &:active::before {
+    border-color: rgba(68, 68, 68, 0.3);
   }
 }
 
@@ -71,6 +82,8 @@
 
   .field-type__name {
     width: 167px;
+    margin: 0;
+    padding-top: 17px;
 
     &::after {
       display: none;
@@ -78,6 +91,37 @@
   }
 
   .field-type__label {
-    margin-bottom: 15px;
+    width: 100%;
+    margin-bottom: 24px;
+    padding: 17px 40px;
+    padding-left: 80px;
+    .font(19px, 19px, 700);
+
+    &::before {
+      width: 53px;
+      height: 53px;
+    }
+
+    &::after {
+      top: 16px;
+      left: 16px;
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .field-type {
+    max-width: @desktop-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .field-type__name {
+    width: 175px;
+    padding-left: 65px;
   }
 }

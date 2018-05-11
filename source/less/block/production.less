@@ -1,10 +1,21 @@
 .production {
   display: flex;
   flex-direction: column;
-  width: 262px;
+  width: 260px;
   margin: 0 auto;
-  margin-bottom: 58px;
-  border: 1px solid #ececec;
+  margin-bottom: 60px;
+  box-shadow: inset 0 0 0 1px #ececec;
+
+  &:hover,
+  &:focus {
+    box-shadow: inset 0 0 0 1px #ececec,
+      0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: inset 0 0 0 1px #ececec,
+      0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 .production__title {
@@ -17,25 +28,34 @@
 
 .production__video {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .production__video-play {
   position: absolute;
   top: 38px;
-  left: 75px;
+  left: 78px;
   padding: 0;
   margin: 0;
   background: none;
   border: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(1);
+    opacity: 0.3;
+  }
 }
 
 .production__video-description {
   margin: 0;
-  margin-bottom: 30px;
-  padding-left: 34px;
-  width: 190px;
+  margin-bottom: 25px;
+  padding: 0 34px;
   .font(13px, 24px);
   color: #444444;
 }
@@ -50,55 +70,90 @@
   .production {
     width: inherit;
     margin: 0 50px;
+    margin-bottom: 63px;
+    border: none;
+    box-shadow: inset 0 0 0 1px #ececec;
+
+    & img {
+      display: block;
+      border-bottom: 1px solid #ececec;
+    }
   }
 
   .production__title {
+    padding: 36px 0;
+    padding-left: 106px;
+    padding-bottom: 33px;
     .font(20px, 24px, 700);
+    background-position: 41px 31px;
   }
 
   .production__video-description {
     width: 100%;
+    margin-bottom: 34px;
     padding: 0 40px;
     .font(15px, 30px);
   }
 
   .production__video {
+    margin: 0 auto;
     order: -1;
   }
 
+  .production__video-play {
+    top: ~"calc(50% - 42px)";
+    left: ~"calc(50% - 50px)";
+  }
+
   .production__button {
+    margin-bottom: 45px;
     .btn(584px);
   }
 }
 
 @media (min-width: @desktop-width) {
   .production {
+    position: relative;
+    max-width: 1050px;
     min-height: 455px;
-    margin-bottom: 50px;
-    padding: 0 50px;
+    margin: 0 auto;
+    margin-bottom: 104px;
   }
 
   .production__title {
-    width: 242px;
+    width: 368px;
     margin-left: auto;
+    padding: 96px 77px;
+    padding-bottom: 33px;
+    background-position: 80px 42px;
   }
 
   .production__video {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 682px;
     height: 455px;
     margin: 0;
     background: #ececec;
+
+    & img {
+      display: block;
+    }
   }
 
   .production__video-description {
-    width: 242px;
+    width: 368px;
     margin-left: auto;
+    margin-bottom: 45px;
+    padding-left: 77px;
     .font(15px, 30px);
   }
 
   .production__button {
     margin-left: auto;
+    margin-right: 58px;
+    margin-bottom: 60px;
     .btn(230px);
   }
 }
