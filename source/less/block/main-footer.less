@@ -29,8 +29,19 @@
   color: #000000;
   text-decoration: none;
 
+  &:hover {
+    & .main-footer__logo-htmlacademy {
+      fill: #46c1ae;
+    }
+  }
+
   &:active {
     color: rgba(0, 0, 0, 0.3);
+
+    & .main-footer__logo-htmlacademy {
+      fill: #46c1ae;
+      opacity: 0.3;
+    }
   }
 }
 
@@ -42,6 +53,7 @@
 
 .main-footer__logo-htmlacademy {
   margin-left: 26px;
+  fill: #63d1bb;
 }
 
 @media (min-width: @tablet-width) {
@@ -53,8 +65,24 @@
     padding-bottom: 41px;
   }
 
+  .main-footer__logo-link {
+    &:hover {
+      & .main-footer__logo {
+        fill: #46c1ae;
+      }
+    }
+
+    &:active {
+      & .main-footer__logo {
+        fill: #46c1ae;
+        opacity: 0.3;
+      }
+    }
+  }
+
   .main-footer__logo {
     display: block;
+    fill: #231f20;
   }
 
   .main-footer__social {

@@ -47,21 +47,40 @@
   width: 130px;
   padding: 0;
   border: 1px solid #ececec;
+  background-color: #ffffff;
   box-sizing: border-box;
 }
 
 .reviews__toggle--prev {
   display: block;
   padding: 26px 0;
-  background: #ffffff url("../img/icon-left-arrow.svg") no-repeat center;
+  background: url("../img/icon-left-arrow.svg") no-repeat center;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .reviews__toggle--next {
   display: block;
   padding: 26px 0;
-  background: #ffffff url("../img/icon-right-arrow.svg") no-repeat center;
+  background: url("../img/icon-right-arrow.svg") no-repeat center;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
