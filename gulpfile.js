@@ -14,6 +14,8 @@ var run = require("run-sequence");
 var del = require("del");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
+var cheerio = require("gulp-cheerio");
+var replace = require("replace");
 
 gulp.task("style", function() {
   gulp.src("source/less/style.less")
@@ -22,7 +24,7 @@ gulp.task("style", function() {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("source/css"))
     .pipe(cssmin())
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"))
@@ -48,10 +50,21 @@ gulp.task("images", function() {
 });
 
 gulp.task("sprite", function() {
-  gulp.src("build/img/sprite/*.svg")
+  gulp.src("source/img/sprite/*.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
+    .pipe(cheerio({
+      run: function ($) {
+        $('[fill]').removeAttr('fill');
+        $('[stroke]').removeAttr('stroke');
+        $('[style]').removeAttr('style');
+      },
+      parserOptions: {
+        xmlMode: true
+      }
+    }))
+  .pipe(replace('&gt;', '>'))
   .pipe(rename("sprite.svg"))
   .pipe(gulp.dest("build/img"));
 });
