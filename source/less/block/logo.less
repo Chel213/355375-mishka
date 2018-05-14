@@ -1,15 +1,38 @@
-.logo__link--active img {
+.logo__link {
+  display: block;
+}
+
+.logo__link--active {
+  display: block;
+
   &:hover,
   &:focus {
-    opacity: 0.6;
+    & .logo__img {
+      opacity: 0.6;
+    }
   }
 
   &:active {
-    opacity: 0.3;
+    & .logo__img {
+      opacity: 0.3;
+    }
   }
 }
 
 .logo__img {
   display: block;
+  width: 86px;
   margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .logo__img {
+    width: 113px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .logo__img {
+    width: 149px;
+  }
 }
