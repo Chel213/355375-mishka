@@ -15,7 +15,7 @@ var del = require("del");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var cheerio = require("gulp-cheerio");
-var replace = require("replace");
+var replace = require("gulp-replace");
 
 gulp.task("style", function() {
   gulp.src("source/less/style.less")
@@ -50,7 +50,7 @@ gulp.task("images", function() {
 });
 
 gulp.task("sprite", function() {
-  gulp.src("source/img/sprite/*.svg")
+  gulp.src("build/img/sprite/*.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
