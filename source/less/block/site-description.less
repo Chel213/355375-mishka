@@ -188,8 +188,17 @@
     padding: 0;
   }
 
-  .site-description__link-left,
+  .site-description__link-left {
+    &::after {
+      top: ~"calc(50% - 33px)";
+      left: 85%;
+    }
+  }
+
   .site-description__link-right {
-    background-position: 93%;
+    &::after {
+      top: ~"calc(50% - 33px)";
+      left: 82%;
+    }
   }
 }

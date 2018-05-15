@@ -1,10 +1,32 @@
 .social {
   display: flex;
+  align-items: baseline;
 }
 
 .social__item {
-  padding: 30px;
+  padding: 14px 20px;
   justify-content: center;
+}
+
+.social__item--instagram {
+  & .social__icon {
+    width: 22px;
+    height: 21px;
+  }
+}
+
+.social__item--facebook {
+  & .social__icon {
+    width: 15px;
+    height: 28px;
+  }
+}
+
+.social__item--twitter {
+  & .social__icon {
+    width: 23px;
+    height: 20px;
+  }
 }
 
 .social__icon {

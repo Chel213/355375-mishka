@@ -27,8 +27,8 @@
   flex-direction: column;
 }
 
-.field-type__input {
-  display: none;
+.field-type__input:focus + .field-type__label::before {
+  border-color: #62d1ba;
 }
 
 .field-type__input:checked + .field-type__label::after {
