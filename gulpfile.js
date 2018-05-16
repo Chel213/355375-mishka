@@ -15,6 +15,7 @@ var del = require("del");
 var cheerio = require("gulp-cheerio");
 var replace = require("gulp-replace");
 var webp = require("gulp-webp");
+var minjs = require("gulp-minify");
 
 //собираем css, cssmin
 gulp.task("style", function() {
@@ -81,12 +82,18 @@ gulp.task("webp", function() {
 gulp.task("copy", function() {
   gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/*.html",
-    "source/js/**/*"
+    "source/*.html"
     ], {
       base: "source"
   })
   .pipe(gulp.dest("build"))
+});
+
+//минифицируем js
+gulp.task("minify", function() {
+  gulp.src("source/js/*.js")
+    .pipe(minjs())
+    .pipe(gulp.dest("build/js"))
 });
 
 //запускаем последовательную сборку
@@ -97,6 +104,7 @@ gulp.task("build", function(done) {
     "sprite",
     "webp",
     "copy",
+    "minify",
      done
     );
 });
