@@ -18,6 +18,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.6.1",
     "gulp-svgstore": "^6.1.1",
+    "gulp-webp": "^3.0.0",
     "run-sequence": "^2.2.1",
     "stylelint": "9.2.x",
     "stylelint-config-htmlacademy": "0.1.x"
@@ -32,8 +33,9 @@
     "style": "gulp style",
     "copy": "gulp copy",
     "image": "gulp images",
-    "sprite": "gulp sprite"
-    },
+    "sprite": "gulp sprite",
+    "webp": "gulp webp"
+  },
   "browserslist": [
     "last 2 versions",
     "IE 11",

@@ -14,6 +14,7 @@ var run = require("run-sequence");
 var del = require("del");
 var cheerio = require("gulp-cheerio");
 var replace = require("gulp-replace");
+var webp = require("gulp-webp");
 
 //собираем css, cssmin
 gulp.task("style", function() {
@@ -23,7 +24,7 @@ gulp.task("style", function() {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(cssmin())
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"))
@@ -48,7 +49,7 @@ gulp.task("images", [], function() {
 
 //собираем спрайт из папки sprite
 gulp.task("sprite", function() {
-  gulp.src("source/img/sprite/*.svg")
+  gulp.src("build/img/sprite/*.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -66,14 +67,20 @@ gulp.task("sprite", function() {
     //исправляем баг с спец символом
   .pipe(replace('&gt;', '>'))
   .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("sourse/img"));
+  .pipe(gulp.dest("build/img"));
+});
+
+//конвертируем изображения в формат webp
+gulp.task("webp", function() {
+  gulp.src("source/img/*.{png,jpg}")
+  .pipe(webp({quality: 90}))
+  .pipe(gulp.dest("build/img"))
 });
 
 //копируем необходимый контент
 gulp.task("copy", function() {
   gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/img/**/*",
     "source/*.html",
     "source/js/**/*"
     ], {
@@ -86,7 +93,7 @@ gulp.task("copy", function() {
 
 
 gulp.task("build", function(done) {
-  run("clean", "style", "sprite", "copy", "images", done);
+  run("clean", "style", "copy", done);
 });
 
 
