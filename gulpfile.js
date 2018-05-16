@@ -33,11 +33,11 @@ gulp.task("style", function() {
 
 //удаляем папку build
 gulp.task("clean", function() {
-  del("build");
+  return del("build");
 });
 
 //минифицируем изображения
-gulp.task("images", [], function() {
+gulp.task("images", function() {
   gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.jpegtran({progressive: true}),
@@ -49,7 +49,7 @@ gulp.task("images", [], function() {
 
 //собираем спрайт из папки sprite
 gulp.task("sprite", function() {
-  gulp.src("build/img/sprite/*.svg")
+  gulp.src("source/img/sprite/*.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -90,18 +90,21 @@ gulp.task("copy", function() {
 });
 
 //запускаем последовательную сборку
-
-
 gulp.task("build", function(done) {
-  run("clean", "style", "copy", done);
+  run("clean",
+    "style",
+    "images",
+    "sprite",
+    "webp",
+    "copy",
+     done
+    );
 });
 
 
-
-
-gulp.task("serve", ["style"], function() {
+gulp.task("serve", function() {
   server.init({
-    server: "source/",
+    server: "build/",
     notify: false,
     open: true,
     cors: true,
@@ -109,5 +112,6 @@ gulp.task("serve", ["style"], function() {
   });
 
   gulp.watch("source/less/**/*.less", ["style"]);
-  gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch("source/*.html", ["copy"]);
+  //gulp.watch("source/*.html").on("change", server.reload);
 });
