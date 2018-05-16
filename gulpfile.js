@@ -12,11 +12,10 @@ var svgstore = require("gulp-svgstore");
 var rename = require("gulp-rename");
 var run = require("run-sequence");
 var del = require("del");
-var posthtml = require("gulp-posthtml");
-var include = require("posthtml-include");
 var cheerio = require("gulp-cheerio");
 var replace = require("gulp-replace");
 
+//собираем css, cssmin
 gulp.task("style", function() {
   gulp.src("source/less/style.less")
     .pipe(plumber())
@@ -31,15 +30,13 @@ gulp.task("style", function() {
     .pipe(server.stream());
 });
 
-gulp.task("html", function() {
-  gulp.src("source/*.html")
-    .pipe(posthtml([
-      include()
-    ]))
-    .pipe(gulp.dest("build"));
+//удаляем папку build
+gulp.task("clean", function() {
+  del("build");
 });
 
-gulp.task("images", function() {
+//минифицируем изображения
+gulp.task("images", [], function() {
   gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.jpegtran({progressive: true}),
@@ -49,11 +46,13 @@ gulp.task("images", function() {
   .pipe(gulp.dest("build/img"));
 });
 
+//собираем спрайт из папки sprite
 gulp.task("sprite", function() {
-  gulp.src("build/img/sprite/*.svg")
+  gulp.src("source/img/sprite/*.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
+    //удаляем атрибуты
     .pipe(cheerio({
       run: function ($) {
         $('[fill]').removeAttr('fill');
@@ -64,28 +63,30 @@ gulp.task("sprite", function() {
         xmlMode: true
       }
     }))
+    //исправляем баг с спец символом
   .pipe(replace('&gt;', '>'))
   .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("build/img"));
+  .pipe(gulp.dest("sourse/img"));
 });
 
+//копируем необходимый контент
 gulp.task("copy", function() {
   gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/js/**/*",
-    "source/img/**/*"
+    "source/img/**/*",
+    "source/*.html",
+    "source/js/**/*"
     ], {
       base: "source"
   })
   .pipe(gulp.dest("build"))
 });
 
-gulp.task("clean", function() {
-  del("build");
-});
+//запускаем последовательную сборку
+
 
 gulp.task("build", function(done) {
-  run("clean", "style", "sprite", "html", done);
+  run("clean", "style", "sprite", "copy", "images", done);
 });
 
 
