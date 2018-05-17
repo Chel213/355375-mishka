@@ -81,6 +81,21 @@
     }
   }
 
+  .main-footer__logo-link--no-active {
+    &:hover {
+      & .main-footer__logo {
+        fill: inherit;
+      }
+    }
+
+    &:active {
+      & .main-footer__logo {
+        fill: inherit;
+        opacity: inherit;
+      }
+    }
+  }
+
   .main-footer__logo {
     display: block;
     fill: #231f20;

@@ -7,7 +7,8 @@
   padding-bottom: 42px;
   font-family: @font-base;
   background: url("../img/bg-zigzag-line.svg") repeat-x bottom;
-  background-size: auto 6px;
+  background-size: @mobile-width 6px;
+  background-position-x: 25px;
 }
 
 .goods-week__container-name {
@@ -83,7 +84,8 @@
     padding: 0 50px;
     padding-bottom: 68px;
     background-position: bottom;
-    background-size: auto 14px;
+    background-size: @tablet-width 14px;
+    background-position-x: 20px;
   }
 
   .goods-week__container-name {
@@ -159,7 +161,7 @@
     margin-bottom: 52px;
     padding: 53px 50px;
     padding-bottom: 95px;
-    background-size: auto 20px;
+    background-size: 1050px 20px;
   }
 
   .goods-week__container-name {
@@ -177,6 +179,7 @@
 
   .goods-week__name {
     width: 700px;
+    margin-right: auto;
     .font(53px, 57px, 700);
   }
 

@@ -129,6 +129,7 @@
 
     & img {
       display: block;
+      width: 334px;
     }
   }
 
@@ -146,6 +147,7 @@
   .catalog__item-description {
     display: flex;
     flex-direction: column;
+    width: 100%;
     flex-grow: 1;
     padding-top: 25px;
   }
@@ -176,13 +178,15 @@
 
   .catalog__list {
     flex-direction: row;
-    margin-left: -25px;
+    flex-wrap: wrap;
+    margin-left: -50px;
   }
 
   .catalog__item {
     flex-direction: column;
     width: 316px;
-    margin: 0 25px;
+    margin: 0;
+    margin-left: 50px;
   }
 
   .catalog__item-name {

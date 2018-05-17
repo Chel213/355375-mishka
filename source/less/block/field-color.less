@@ -61,10 +61,18 @@
 
   &:hover::before {
     border-color: #62d1ba;
+
+    @media (hover: none) {
+      border-color: inherit;
+    }
   }
 
   &:active::before {
     border-color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:active::after {
+    background: url("../img/icon-tick.svg") no-repeat center;
   }
 }
 
