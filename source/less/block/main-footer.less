@@ -29,8 +29,19 @@
   color: #000000;
   text-decoration: none;
 
+  &:hover {
+    & .main-footer__logo-htmlacademy {
+      fill: #46c1ae;
+    }
+  }
+
   &:active {
     color: rgba(0, 0, 0, 0.3);
+
+    & .main-footer__logo-htmlacademy {
+      fill: #46c1ae;
+      opacity: 0.3;
+    }
   }
 }
 
@@ -42,19 +53,52 @@
 
 .main-footer__logo-htmlacademy {
   margin-left: 26px;
+  fill: #63d1bb;
 }
 
 @media (min-width: @tablet-width) {
   .main-footer__container {
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
     padding: 38px 50px;
     padding-bottom: 41px;
   }
 
+  .main-footer__logo-link {
+    padding-top: 12px;
+
+    &:hover {
+      & .main-footer__logo {
+        fill: #46c1ae;
+      }
+    }
+
+    &:active {
+      & .main-footer__logo {
+        fill: #46c1ae;
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .main-footer__logo-link--no-active {
+    &:hover {
+      & .main-footer__logo {
+        fill: inherit;
+      }
+    }
+
+    &:active {
+      & .main-footer__logo {
+        fill: inherit;
+        opacity: inherit;
+      }
+    }
+  }
+
   .main-footer__logo {
     display: block;
+    fill: #231f20;
   }
 
   .main-footer__social {
@@ -69,7 +113,7 @@
     margin: 0;
     margin-left: auto;
     padding: 0;
-    padding-top: 17px;
+    padding-top: 19px;
   }
 
   .main-footer__logo-htmlacademy {
@@ -87,4 +131,3 @@
     margin-left: 330px;
   }
 }
-

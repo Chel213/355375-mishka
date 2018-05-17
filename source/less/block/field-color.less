@@ -27,10 +27,6 @@
   flex-direction: column;
 }
 
-.field-color__input {
-  display: none;
-}
-
 .field-color__input:checked + .field-color__label::after {
   background: url("../img/icon-tick.svg") no-repeat center;
   background-size: 22px 16px;
@@ -63,13 +59,20 @@
     height: 30px;
   }
 
-  &:hover::before,
-  &:focus::before {
+  &:hover::before {
     border-color: #62d1ba;
+
+    @media (hover: none) {
+      border-color: inherit;
+    }
   }
 
   &:active::before {
     border-color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:active::after {
+    background: url("../img/icon-tick.svg") no-repeat center;
   }
 }
 

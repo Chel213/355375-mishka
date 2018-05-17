@@ -4,39 +4,51 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
-    <link href="css/style.css" rel="stylesheet">
-    <script src="js/picturefill.js"></script>
+    <link href="css/style.min.css" rel="stylesheet">
+    <script src="js/picturefill-min.js"></script>
+    <script src="js/svg4everybody-min.js"></script>
+    <script>svg4everybody();</script>
   </head>
   <body>
-      <header class="main-header">
-        <div class="main-header__container">
-          <div class="main-header__logo logo">
-            <a class="logo__link" href="index.html">
-              <picture>
-                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
-                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-                  <img class="logo__img" src="img/logo-mobile.svg" alt="logo-mishka">
-              </picture>
-            </a>
-          </div>
-          <button class="main-header__control-popup" type="button" aria-label="Меню"></button>
-          <nav class="site-navigation">
-            <ul class="site-navigation__list site-navigation__list--main">
-              <li class="site-navigation__item site-navigation__item--catalog"><a class="site-navigation__link" href="catalog.html">Каталог товаров</a></li>
-              <li class="site-navigation__item site-navigation__item--to-order"><a class="site-navigation__link" href="form.html">Вязание на заказ</a></li>
-            </ul>
-            <ul class="site-navigation__list site-navigation__list--user">
-              <li class="site-navigation__item site-navigation__item--search"><a class="site-navigation__link" href="#">Поиск по сайту</a></li>
-              <li class="site-navigation__item site-navigation__item--cart"><a class="site-navigation__link" href="#">Корзина: пока пуста</a></li>
-            </ul>
-            <ul class="site-navigation__list site-navigation__list--additional">
-              <li class="site-navigation__item"><a class="site-navigation__link" href="#">Новые поступления</a> </li>
-              <li class="site-navigation__item"><a class="site-navigation__link" href="#">Распродажа</a> </li>
-            </ul>
-            <a class="site-navigation__delivery" href="delivery.html">Бесплатная доставка по России</a>
-          </nav>
+    <header class="main-header">
+      <div class="main-header__container">
+        <div class="main-header__logo logo">
+          <a class="logo__link--active" href="index.html">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="logo__img" src="img/logo-mobile.svg" alt="logo-mishka">
+            </picture>
+          </a>
         </div>
-      </header>
+        <button class="main-header__control-popup" type="button" aria-label="Меню"></button>
+        <nav class="site-navigation">
+          <ul class="site-navigation__list site-navigation__list--main">
+            <li class="site-navigation__item site-navigation__item--catalog"><a class="site-navigation__link" href="catalog.html">Каталог товаров</a></li>
+            <li class="site-navigation__item site-navigation__item--to-order"><a class="site-navigation__link site-navigation__link--no-active">Вязание на заказ</a></li>
+          </ul>
+          <ul class="site-navigation__list site-navigation__list--user">
+            <li class="site-navigation__item site-navigation__item--search">
+              <a class="site-navigation__link" href="#">
+                <svg class="site-navigation__item-icon" width="18" height="18">
+                  <use xlink:href="img/sprite.svg#icon-search"></use>
+                </svg>Поиск по сайту</a>
+            </li>
+            <li class="site-navigation__item site-navigation__item--cart">
+              <a class="site-navigation__link" href="#">
+                <svg class="site-navigation__item-icon" width="18" height="18">
+                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                </svg>Корзина: пока пуста</a>
+            </li>
+          </ul>
+          <ul class="site-navigation__list site-navigation__list--additional">
+            <li class="site-navigation__item"><a class="site-navigation__link" href="#">Новые поступления</a> </li>
+            <li class="site-navigation__item"><a class="site-navigation__link" href="#">Распродажа</a> </li>
+          </ul>
+          <a class="site-navigation__delivery" href="delivery.html">Бесплатная доставка по России</a>
+        </nav>
+      </div>
+    </header>
     <main class="page-main">
       <section class="page-title">
         <h2 class="page-title__name">Вязание на заказ</h2>
@@ -44,37 +56,37 @@
       </section>
       <form class="form" action="http://echo.htmlacademy.ru" method="POST">
         <div class="form__field-type">
-          <div class="field-type">
+          <div class="field-type container">
             <p class="field-type__name">Тип</p>
             <div class="field-type__form">
-              <input class="field-type__input" type="radio" name="type" id="field-type-accessory" value="accessory" checked>
+              <input class="field-type__input visually-hidden" type="radio" name="type" id="field-type-accessory" value="accessory" checked>
               <label class="field-type__label" for="field-type-accessory">Аксессуар для интерьера</label>
-              <input class="field-type__input" type="radio" name="type" id="field-type-toy" value="toy">
+              <input class="field-type__input visually-hidden" type="radio" name="type" id="field-type-toy" value="toy">
               <label class="field-type__label" for="field-type-toy">Детская игрушка</label>
             </div>
           </div>
         </div>
         <div class="form__field-color">
-          <div class="field-color">
+          <div class="field-color container">
             <p class="field-color__name">Цвет</p>
             <div class="field-color__form">
-              <input class="field-color__input" type="checkbox" name="white" id="field-color-white" checked>
+              <input class="field-color__input visually-hidden" type="checkbox" name="white" id="field-color-white" checked>
               <label class="field-color__label" for="field-color-white">Белый</label>
-              <input class="field-color__input" type="checkbox" name="gray" id="field-color-gray" checked>
+              <input class="field-color__input visually-hidden" type="checkbox" name="gray" id="field-color-gray" checked>
               <label class="field-color__label" for="field-color-gray">Серый</label>
-              <input class="field-color__input" type="checkbox" name="tiffany" id="field-color-tiffany">
+              <input class="field-color__input visually-hidden" type="checkbox" name="tiffany" id="field-color-tiffany">
               <label class="field-color__label" for="field-color-tiffany">«Тиффани»</label>
-              <input class="field-color__input" type="checkbox" name="black" id="field-color-black">
+              <input class="field-color__input visually-hidden" type="checkbox" name="black" id="field-color-black">
               <label class="field-color__label" for="field-color-black">Черный</label>
-              <input class="field-color__input" type="checkbox" name="pink" id="field-color-pink">
+              <input class="field-color__input visually-hidden" type="checkbox" name="pink" id="field-color-pink">
               <label class="field-color__label" for="field-color-pink">Розовый</label>
-              <input class="field-color__input" type="checkbox" name="orange" id="field-color-orange">
+              <input class="field-color__input visually-hidden" type="checkbox" name="orange" id="field-color-orange">
               <label class="field-color__label" for="field-color-orange">Оранжевый</label>
             </div>
           </div>
         </div>
         <div class="form__name">
-          <div class="field-name">
+          <div class="field-name container">
             <p class="field-name__name">Фио</p>
             <div class="field-name__form">
               <div class="field-name__wrapper">
@@ -93,23 +105,30 @@
           </div>
         </div>
         <div class="form__tel">
-          <div class="field-tel"><p class="field-tel__name">Тел</p>
+          <div class="field-tel container">
+            <label for="field-tel-phone" class="field-tel__name">Тел</label>
             <input class="field-tel__input" type="tel" name="phone" id="field-tel-phone" placeholder="+7 ХХХ ХХ ХХ*" required>
+            <svg class="field-tel__input-icon" width="25" height="24">
+              <use xlink:href="img/sprite.svg#icon-phone"></use>
+            </svg>
           </div>
         </div>
         <div class="form__email">
-          <div class="field-email">
-            <p class="field-email__name">E-mail</p>
+          <div class="field-email container">
+            <label for="field-email" class="field-email__name">E-mail</label>
             <input class="field-email__input" type="email" name="email" id="field-email" placeholder="Ваш Email*" required>
+            <svg class="field-email__input-icon" width="32" height="31">
+              <use xlink:href="img/sprite.svg#icon-mail"></use>
+            </svg>
           </div>
         </div>
         <div class="form__message">
-          <div class="field-message">
-            <p class="field-message__name">Доп</p>
+          <div class="field-message container">
+            <label for="field-message" class="field-message__name">Доп</label>
             <textarea class="field-message__textarea" name="message" id="field-message" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </div>
         </div>
-        <div class="form__submit">
+        <div class="form__submit container">
           <p class="form__note">*Поля обязательны для заполнения</p>
           <input class="form__submit-button" type="submit" value="Отправить заказ">
         </div>
@@ -117,18 +136,36 @@
     </main>
     <footer class="main-footer">
       <div class="main-footer__container">
-        <img class="main-footer__logo" width="102" height="34" src="img/logo-footer.svg" alt="logo-mishka">
+        <a class="main-footer__logo-link" href="index.html">
+          <svg class="main-footer__logo" width="102" height="34">
+            <use xlink:href="img/sprite.svg#logo-footer"></use>
+          </svg>
+        </a>
         <div class="main-footer__social social">
-          <a class="social__item social__item--instagram" href="#"><span class="visually-hidden">инстаграмм</span></a>
-          <a class="social__item social__item--facebook" href="#"><span class="visually-hidden">фейсбук</span></a>
-          <a class="social__item social__item--twitter" href="#"><span class="visually-hidden">Твитер</span></a>
+          <a class="social__item social__item--instagram" href="#">
+            <svg class="social__icon" width="22" height="21">
+              <use xlink:href="img/sprite.svg#icon-insta"></use>
+            </svg>
+            <span class="visually-hidden">инстаграмм</span></a>
+          <a class="social__item social__item--facebook" href="#">
+            <svg class="social__icon" width="22" height="21">
+              <use xlink:href="img/sprite.svg#icon-fb"></use>
+            </svg>
+            <span class="visually-hidden">фейсбук</span></a>
+          <a class="social__item social__item--twitter" href="#">
+            <svg class="social__icon" width="22" height="21">
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
+            </svg>
+            <span class="visually-hidden">Твитер</span></a>
         </div>
         <a class="main-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
           <p class="main-footer__developed">Разработано</p>
-          <img class="main-footer__logo-htmlacademy" src="img/logo-htmlacademy.svg" width="27" height="34" alt="logo-htmlacademy">
+          <svg class="main-footer__logo-htmlacademy" width="27" height="34">
+            <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+          </svg>
         </a>
       </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/script-min.js"></script>
   </body>
 </html>
