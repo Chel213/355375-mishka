@@ -12,6 +12,7 @@
   flex-direction: column;
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
@@ -21,19 +22,23 @@
 
 .site-navigation__link {
   position: relative;
+
   display: block;
   padding: 27px 20px;
   padding-left: 75px;
-  text-decoration: none;
+
   font-family: @font-base;
-  .font(17px, 24px, 700);
   color: #000000;
+  text-decoration: none;
+
+  .font(17px, 24px, 700);
 
   &:hover {
     color: rgba(0, 0, 0, 0.6);
 
     & .site-navigation__item-icon {
       opacity: 1;
+
       fill: #63d1bb;
     }
   }
@@ -43,6 +48,7 @@
 
     & .site-navigation__item-icon {
       opacity: 0.3;
+
       fill: #63d1bb;
     }
   }
@@ -54,6 +60,7 @@
 
     & .site-navigation__item-icon {
       opacity: inherit;
+
       fill: inherit;
     }
   }
@@ -69,8 +76,9 @@
 
 .site-navigation__item-icon {
   position: absolute;
-  left: 32px;
   top: ~"calc(50% - 9px)";
+  left: 32px;
+
   opacity: 0.2;
 }
 
@@ -86,35 +94,38 @@
   }
 
   .site-navigation__list {
+    flex-grow: 1;
     flex-direction: row;
     flex-wrap: wrap;
-    flex-grow: 1;
   }
 
   .site-navigation__list--main {
-    width: 59%;
-    padding-left: 30px;
     justify-content: flex-start;
     order: 2;
+    width: 59%;
+    padding-left: 30px;
 
     & .site-navigation__link {
       padding: 17px 20px;
       padding-right: 16px;
+
       .font(15px, 24px, 700);
     }
   }
 
   .site-navigation__list--user {
+    justify-content: flex-end;
+    order: 1;
     width: 100%;
     padding-right: 50px;
     padding-left: 220px;
-    justify-content: flex-end;
-    order: 1;
+
     border-bottom: 1px solid rgba(68, 68, 68, 0.1);
 
     & .site-navigation__link {
       padding: 32px;
       padding-right: 0;
+
       border-left: 1px solid rgba(68, 68, 68, 0.1);
     }
   }
@@ -125,6 +136,7 @@
     & .site-navigation__link {
       width: 83px;
       height: 100%;
+
       font-size: 0;
     }
   }
@@ -135,6 +147,7 @@
     .site-navigation__link {
       width: 264px;
       padding-left: 60px;
+
       text-align: right;
     }
   }
@@ -142,14 +155,16 @@
   .site-navigation__delivery {
     display: block;
     flex-shrink: 1;
+    order: 3;
     align-self: flex-end;
     padding: 18px 20px;
     padding-right: 50px;
-    order: 3;
-    .font(15px, 24px);
+
     text-align: right;
     color: #444444;
     text-decoration: none;
+
+    .font(15px, 24px);
 
     &:hover,
     &:focus {
@@ -168,13 +183,15 @@
 
 @media (min-width: @desktop-width) {
   .site-navigation__list--main {
+    order: 0;
     width: 400px;
     padding-left: 15px;
+
     border-bottom: 1px solid rgba(68, 68, 68, 0.1);
-    order: 0;
 
     & .site-navigation__link {
       padding: 32px 35px;
+
       .font(17px, 24px, 700);
     }
   }
@@ -195,12 +212,13 @@
 
   .site-navigation__list--additional {
     display: flex;
-    padding-left: 30px;
     order: 3;
+    padding-left: 30px;
 
     & .site-navigation__link {
       padding: 17px 20px;
       padding-right: 41px;
+
       .font(15px, 24px, 700);
     }
   }

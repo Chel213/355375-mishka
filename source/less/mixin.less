@@ -1,32 +1,36 @@
 .font-title-index {
+  font-weight: 700;
   font-size: 25px;
   line-height: 30px;
-  font-weight: 700;
   color: #000000;
 }
 
 .font (@size, @height, @weight: 400) {
+  font-weight: @weight;
   font-size: @size;
   line-height: @height;
-  font-weight: @weight;
 }
 
 .btn (@width, @font-size-btn: 17px) {
   display: block;
   width: @width;
   padding: 14px 5px;
+
   font-family: @font-base;
-  .font(@font-size-btn, 20px, 700);
-  color: #444444;
-  text-decoration: none;
   text-align: center;
+  color: #444444;
   text-transform: uppercase;
+  text-decoration: none;
+
   background-color: #ffffff;
   border: 2px solid #444444;
+
+  .font(@font-size-btn, 20px, 700);
 
   &:hover,
   &:focus {
     color: #ffffff;
+
     background-color: #444444;
   }
 

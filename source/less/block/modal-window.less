@@ -2,16 +2,19 @@
   position: fixed;
   top: 25%;
   left: ~"calc(50% - 160px)";
+  z-index: 11;
+
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   width: 320px;
   padding: 30px 30px;
+
   font-family: @font-base;
+
   background-color: rgba(255, 255, 255, 1);
   border: 1px solid #c6c6c6;
   box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
-  box-sizing: border-box;
-  z-index: 11;
 }
 
 .modal-window__name {
@@ -19,15 +22,19 @@
   margin: 0 auto;
   margin-bottom: 12px;
   padding: 0;
+
   text-align: center;
-  .font(25px, 30px, 700);
   text-transform: uppercase;
+
+  .font(25px, 30px, 700);
 }
 
 .modal-window__size {
   margin: 0 auto;
   margin-bottom: 23px;
+
   text-align: center;
+
   .font(15px, 30px);
 }
 
@@ -50,25 +57,32 @@
   width: 80px;
   margin-bottom: 30px;
   padding: 16px 0;
-  .font(17px, 17px, 700);
-  text-transform: uppercase;
+
   text-align: center;
+  text-transform: uppercase;
+
   border: 2px solid rgba(68, 68, 68, 0.1);
+
+  .font(17px, 17px, 700);
 }
 
 .modal-window__button {
   width: 260px;
   padding: 17px 0;
-  .font(17px, 17px, 700);
-  text-transform: uppercase;
+
   color: #ffffff;
+  text-transform: uppercase;
+
   background: #63d1bb;
   border: none;
+
+  .font(17px, 17px, 700);
 }
 
 @media (min-width: @tablet-width) {
   .modal-window {
     left: ~"calc(50% - 283px)";
+
     width: 566px;
     padding: 34px 30px;
   }
@@ -76,11 +90,13 @@
   .modal-window__name {
     width: 380px;
     margin-bottom: 14px;
+
     .font(30px, 57px, 700);
   }
 
   .modal-window__size {
     margin-bottom: 21px;
+
     .font(17px, 30px);
   }
 

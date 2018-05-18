@@ -4,6 +4,7 @@
   width: 260px;
   margin: 0 auto;
   margin-bottom: 60px;
+
   box-shadow: inset 0 0 0 1px #ececec;
 
   &:hover,
@@ -22,12 +23,15 @@
   margin: 0;
   padding: 24px 0;
   padding-left: 90px;
-  .font(17px, 24px, 700);
+
   background: url("../img/icon-video.svg") no-repeat 35px 30px;
+
+  .font(17px, 24px, 700);
 }
 
 .production__video {
   position: relative;
+
   margin-bottom: 20px;
 }
 
@@ -35,8 +39,10 @@
   position: absolute;
   top: 38px;
   left: 78px;
-  padding: 0;
+
   margin: 0;
+  padding: 0;
+
   background: none;
   border: none;
   cursor: pointer;
@@ -56,13 +62,16 @@
   margin: 0;
   margin-bottom: 25px;
   padding: 0 34px;
-  .font(13px, 24px);
+
   color: #444444;
+
+  .font(13px, 24px);
 }
 
 .production__button {
   align-self: center;
   margin-bottom: 32px;
+
   .btn(192px);
 }
 
@@ -71,33 +80,38 @@
     width: inherit;
     margin: 0 50px;
     margin-bottom: 63px;
+
     border: none;
     box-shadow: inset 0 0 0 1px #ececec;
 
     & img {
       display: block;
+
       border-bottom: 1px solid #ececec;
     }
   }
 
   .production__title {
     padding: 36px 0;
-    padding-left: 106px;
     padding-bottom: 33px;
-    .font(20px, 24px, 700);
+    padding-left: 106px;
+
     background-position: 41px 31px;
+
+    .font(20px, 24px, 700);
   }
 
   .production__video-description {
     width: 100%;
     margin-bottom: 34px;
     padding: 0 40px;
+
     .font(15px, 30px);
   }
 
   .production__video {
-    margin: 0 auto;
     order: -1;
+    margin: 0 auto;
   }
 
   .production__video-play {
@@ -111,6 +125,7 @@
 
   .production__button {
     margin-bottom: 45px;
+
     .btn(584px);
   }
 }
@@ -118,6 +133,7 @@
 @media (min-width: @desktop-width) {
   .production {
     position: relative;
+
     max-width: 1050px;
     min-height: 455px;
     margin: 0 auto;
@@ -129,6 +145,7 @@
     margin-left: auto;
     padding: 96px 77px;
     padding-bottom: 33px;
+
     background-position: 80px 42px;
   }
 
@@ -136,9 +153,11 @@
     position: absolute;
     top: 0;
     left: 0;
+
     width: 682px;
     height: 455px;
     margin: 0;
+
     background: #ececec;
 
     & img {
@@ -148,16 +167,18 @@
 
   .production__video-description {
     width: 368px;
-    margin-left: auto;
     margin-bottom: 45px;
+    margin-left: auto;
     padding-left: 77px;
+
     .font(15px, 30px);
   }
 
   .production__button {
-    margin-left: auto;
     margin-right: 58px;
     margin-bottom: 60px;
+    margin-left: auto;
+
     .btn(230px);
   }
 }

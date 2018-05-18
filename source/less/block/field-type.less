@@ -5,19 +5,24 @@
 
 .field-type__name {
   position: relative;
+
   margin: 0;
   margin-bottom: 25px;
-  .font(17px, 17px, 700);
+
   color: #63d1bb;
   text-transform: uppercase;
 
+  .font(17px, 17px, 700);
+
   &::after {
+    content: "";
     position: absolute;
-    right: 0;
     top: 50%;
+    right: 0;
+
     width: ~"calc(100% - 62px)";
     height: 1px;
-    content: "";
+
     background-color: #63d1bb;
   }
 }
@@ -33,31 +38,38 @@
 
 .field-type__label {
   position: relative;
+
   width: 260px;
   padding: 10px 40px;
   padding-bottom: 14px;
   padding-left: 60px;
-  .font(17px, 18px, 700);
+
   color: #000000;
 
+  .font(17px, 18px, 700);
+
   &::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
-    content: "";
+
     width: 40px;
     height: 40px;
+
     border: 2px solid #444444;
     border-radius: 50%;
   }
 
   &::after {
+    content: "";
     position: absolute;
     top: 12px;
     left: 12px;
-    content: "";
+
     width: 16px;
     height: 16px;
+
     border-radius: 50%;
   }
 
@@ -94,6 +106,7 @@
     margin-bottom: 24px;
     padding: 17px 40px;
     padding-left: 80px;
+
     .font(19px, 19px, 700);
 
     &::before {
@@ -104,6 +117,7 @@
     &::after {
       top: 16px;
       left: 16px;
+
       width: 22px;
       height: 22px;
     }
@@ -113,10 +127,10 @@
 @media (min-width: @desktop-width) {
   .field-type {
     max-width: @desktop-width;
-    margin-left: auto;
     margin-right: auto;
-    padding-left: 50px;
+    margin-left: auto;
     padding-right: 50px;
+    padding-left: 50px;
   }
 
   .field-type__name {
