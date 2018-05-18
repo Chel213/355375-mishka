@@ -106,8 +106,6 @@ gulp.task("copyhtml", function() {
   .pipe(gulp.dest("build/html-origin"))
 });
 
-
-
 //запускаем последовательную сборку
 gulp.task("build", function(done) {
   run("clean",
@@ -123,7 +121,7 @@ gulp.task("build", function(done) {
     );
 });
 
-
+//server
 gulp.task("serve", function() {
   server.init({
     server: "build/",
@@ -135,5 +133,5 @@ gulp.task("serve", function() {
 
   gulp.watch("source/less/**/*.less", ["style"]);
   gulp.watch("source/*.html", ["copy"]);
-  //gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch("source/*.html").on("change", server.reload);
 });
