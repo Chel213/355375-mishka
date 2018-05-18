@@ -16,6 +16,12 @@ var cheerio = require("gulp-cheerio");
 var replace = require("gulp-replace");
 var webp = require("gulp-webp");
 var minjs = require("gulp-minify");
+var htmlmin = require('gulp-htmlmin');
+
+//удаляем папку build
+gulp.task("clean", function() {
+  return del("build");
+});
 
 //собираем css, cssmin
 gulp.task("style", function() {
@@ -32,11 +38,6 @@ gulp.task("style", function() {
     .pipe(server.stream());
 });
 
-//удаляем папку build
-gulp.task("clean", function() {
-  return del("build");
-});
-
 //минифицируем изображения
 gulp.task("images", function() {
   gulp.src("source/img/**/*.{png,jpg,svg}")
@@ -46,6 +47,13 @@ gulp.task("images", function() {
       imagemin.svgo()
     ]))
   .pipe(gulp.dest("build/img"));
+});
+
+//конвертируем изображения в формат webp
+gulp.task("webp", function() {
+  gulp.src("source/img/*.{png,jpg}")
+  .pipe(webp({quality: 90}))
+  .pipe(gulp.dest("build/img"))
 });
 
 //собираем спрайт из папки sprite
@@ -71,23 +79,12 @@ gulp.task("sprite", function() {
   .pipe(gulp.dest("build/img"));
 });
 
-//конвертируем изображения в формат webp
-gulp.task("webp", function() {
-  gulp.src("source/img/*.{png,jpg}")
-  .pipe(webp({quality: 90}))
-  .pipe(gulp.dest("build/img"))
-});
-
-//копируем необходимый контент
-gulp.task("copy", function() {
-  gulp.src([
-    "source/fonts/**/*.{woff,woff2}",
-    "source/*.html"
-    ], {
-      base: "source"
-  })
-  .pipe(gulp.dest("build"))
-});
+//минифицируем HTML
+gulp.task("htmlmin", function() {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest("build"));
+})
 
 //минифицируем js
 gulp.task("minify", function() {
@@ -96,6 +93,21 @@ gulp.task("minify", function() {
     .pipe(gulp.dest("build/js"))
 });
 
+//копируем необходимый контент
+gulp.task("copyfonts", function() {
+  gulp.src("source/fonts/**/*.{woff,woff2}", {
+      base: "source"
+  })
+  .pipe(gulp.dest("build"))
+});
+
+gulp.task("copyhtml", function() {
+  gulp.src("source/*.html")
+  .pipe(gulp.dest("build/html-origin"))
+});
+
+
+
 //запускаем последовательную сборку
 gulp.task("build", function(done) {
   run("clean",
@@ -103,8 +115,10 @@ gulp.task("build", function(done) {
     "images",
     "sprite",
     "webp",
-    "copy",
+    "copyfonts",
+    "copyhtml",
     "minify",
+    "htmlmin",
      done
     );
 });
