@@ -30,13 +30,8 @@
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
     "start": "gulp build && gulp serve",
-    "clean": "gulp clean",
-    "style": "gulp style",
-    "copy": "gulp copy",
-    "image": "gulp images",
-    "sprite": "gulp sprite",
-    "webp": "gulp webp"
-  },
+    "style": "gulp style"
+    },
   "browserslist": [
     "last 2 versions",
     "IE 11",
@@ -54,6 +49,7 @@
     "node": "8.11"
   },
   "dependencies": {
+    "gulp-htmlmin": "^4.0.0",
     "npm": "^6.0.0"
   }
 }
