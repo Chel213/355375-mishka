@@ -19,12 +19,12 @@ var minjs = require("gulp-minify");
 var htmlmin = require('gulp-htmlmin');
 
 //удаляем папку build
-gulp.task("clean", function() {
+gulp.task("clean", function () {
   return del("build");
 });
 
 //собираем css, cssmin
-gulp.task("style", function() {
+gulp.task("style", function () {
   gulp.src("source/less/style.less")
     .pipe(plumber())
     .pipe(less())
@@ -39,25 +39,25 @@ gulp.task("style", function() {
 });
 
 //минифицируем изображения
-gulp.task("images", function() {
+gulp.task("images", function () {
   gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
-      imagemin.jpegtran({progressive: true}),
-      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.jpegtran({ progressive: true }),
+      imagemin.optipng({ optimizationLevel: 3 }),
       imagemin.svgo()
     ]))
-  .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("build/img"));
 });
 
 //конвертируем изображения в формат webp
-gulp.task("webp", function() {
+gulp.task("webp", function () {
   gulp.src("source/img/*.{png,jpg}")
-  .pipe(webp({quality: 90}))
-  .pipe(gulp.dest("build/img"))
+    .pipe(webp({ quality: 90 }))
+    .pipe(gulp.dest("build/img"))
 });
 
 //собираем спрайт из папки sprite
-gulp.task("sprite", function() {
+gulp.task("sprite", function () {
   gulp.src("source/img/sprite/*.svg")
     .pipe(svgstore({
       inlineSvg: true
@@ -74,40 +74,40 @@ gulp.task("sprite", function() {
       }
     }))
     //исправляем баг с спец символом
-  .pipe(replace('&gt;', '>'))
-  .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("build/img"));
+    .pipe(replace('&gt;', '>'))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"));
 });
 
 //минифицируем HTML
-gulp.task("htmlmin", function() {
+gulp.task("htmlmin", function () {
   return gulp.src("source/*.html")
-    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 })
 
 //минифицируем js
-gulp.task("minify", function() {
+gulp.task("minify", function () {
   gulp.src("source/js/*.js")
     .pipe(minjs())
     .pipe(gulp.dest("build/js"))
 });
 
 //копируем необходимый контент
-gulp.task("copyfonts", function() {
+gulp.task("copyfonts", function () {
   gulp.src("source/fonts/**/*.{woff,woff2}", {
-      base: "source"
+    base: "source"
   })
-  .pipe(gulp.dest("build"))
+    .pipe(gulp.dest("build"))
 });
 
-gulp.task("copyhtml", function() {
+gulp.task("copyhtml", function () {
   gulp.src("source/*.html")
-  .pipe(gulp.dest("build/html-origin"))
+    .pipe(gulp.dest("build/html-origin"))
 });
 
 //запускаем последовательную сборку
-gulp.task("build", function(done) {
+gulp.task("build", function (done) {
   run("clean",
     "style",
     "images",
@@ -117,12 +117,12 @@ gulp.task("build", function(done) {
     "copyhtml",
     "minify",
     "htmlmin",
-     done
-    );
+    done
+  );
 });
 
 //server
-gulp.task("serve", function() {
+gulp.task("serve", function () {
   server.init({
     server: "build/",
     notify: false,
