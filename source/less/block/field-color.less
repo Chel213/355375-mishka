@@ -37,6 +37,26 @@
   background-size: 22px 16px;
 }
 
+.field-color__input:disabled + .field-color__label {
+  &::before {
+    border-color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:active::after {
+    background: transparent;
+  }
+}
+
+.field-color__input:disabled:checked + .field-color__label {
+  &::before {
+    border-color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:active::after {
+    background: url("../img/icon-tick.svg") no-repeat center;
+  }
+}
+
 .field-color__label {
   position: relative;
 
