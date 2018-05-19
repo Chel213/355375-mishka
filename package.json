@@ -31,7 +31,7 @@
     "build": "gulp build",
     "start": "gulp build && gulp serve",
     "style": "gulp style"
-    },
+  },
   "browserslist": [
     "last 2 versions",
     "IE 11",

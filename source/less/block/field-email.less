@@ -1,24 +1,30 @@
 .field-email {
   position: relative;
+
   display: flex;
   flex-direction: column;
 }
 
 .field-email__name {
   position: relative;
+
   margin: 0;
   margin-bottom: 10px;
-  .font(17px, 17px, 700);
+
   color: #63d1bb;
   text-transform: uppercase;
 
+  .font(17px, 17px, 700);
+
   &::after {
+    content: "";
     position: absolute;
-    right: 0;
     top: 50%;
+    right: 0;
+
     width: ~"calc(100% - 81px)";
     height: 1px;
-    content: "";
+
     background-color: #63d1bb;
   }
 }
@@ -26,14 +32,18 @@
 .field-email__input {
   padding: 15px 0;
   padding-right: 45px;
-  .font(17px, 18px);
+
   color: #444444;
+
   border: none;
   border-bottom: 2px solid #000000;
 
+  .font(17px, 18px);
+
   &::placeholder {
-    .font(17px, 18px);
     color: rgba(68, 68, 68, 0.3);
+
+    .font(17px, 18px);
   }
 
   &:hover,
@@ -42,8 +52,9 @@
     outline: none;
 
     & + .field-email__input-icon {
-      fill: #62d1ba;
       opacity: 1;
+
+      fill: #62d1ba;
     }
   }
 
@@ -57,14 +68,15 @@
   position: absolute;
   top: 34px;
   right: 34px;
+
   opacity: 0.2;
 }
 
 @media (min-width: @tablet-width) {
   .field-email {
     flex-direction: row;
-    padding-bottom: 50px;
     align-items: baseline;
+    padding-bottom: 50px;
   }
 
   .field-email__name {
@@ -78,14 +90,17 @@
   .field-email__input {
     width: 500px;
     padding-top: 11px;
-    padding-left: 17px;
     padding-right: 10%;
-    .font(19px, 19px);
+    padding-left: 17px;
+
     background: #f1f1f1;
 
+    .font(19px, 19px);
+
     &::placeholder {
-      .font(19px, 19px);
       color: rgba(68, 68, 68, 0.3);
+
+      .font(19px, 19px);
     }
   }
 
@@ -97,12 +112,12 @@
 
 @media (min-width: @desktop-width) {
   .field-email {
-    max-width: @desktop-width;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 50px;
-    padding-right: 50px;
     align-items: center;
+    max-width: @desktop-width;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 50px;
+    padding-left: 50px;
   }
 
   .field-email__name {
@@ -113,6 +128,7 @@
 
   .field-email__input {
     width: 700px;
+
     background-position: 99%;
   }
 

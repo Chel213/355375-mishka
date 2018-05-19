@@ -5,19 +5,24 @@
 
 .field-name__name {
   position: relative;
+
   margin: 0;
   margin-bottom: 29px;
-  .font(17px, 17px, 700);
+
   color: #63d1bb;
   text-transform: uppercase;
 
+  .font(17px, 17px, 700);
+
   &::after {
+    content: "";
     position: absolute;
-    right: 0;
     top: 50%;
+    right: 0;
+
     width: ~"calc(100% - 62px)";
     height: 1px;
-    content: "";
+
     background-color: #63d1bb;
   }
 }
@@ -34,21 +39,26 @@
 }
 
 .field-name__label {
-  .font(17px, 18px, 700);
   color: #000000;
+
+  .font(17px, 18px, 700);
 }
 
 .field-name__input {
-  padding: 16px 0;
   margin-bottom: 22px;
-  .font(17px, 18px, 400);
+  padding: 16px 0;
+
   color: #444444;
+
   border: none;
   border-bottom: 2px solid #000000;
 
+  .font(17px, 18px, 400);
+
   &::placeholder {
-    .font(17px, 18px);
     color: rgba(68, 68, 68, 0.3);
+
+    .font(17px, 18px);
   }
 
   &:hover,
@@ -95,12 +105,14 @@
   .field-name__label {
     margin-right: 25px;
     padding: 16px 0;
+
     .font(19px, 19px, 700);
   }
 
   .field-name__input {
     width: 100%;
     padding: 15px  18px;
+
     .font(19px, 19px);
 
     &::placeholder {
@@ -112,10 +124,10 @@
 @media (min-width: @desktop-width) {
   .field-name {
     max-width: @desktop-width;
-    margin-left: auto;
     margin-right: auto;
-    padding-left: 50px;
+    margin-left: auto;
     padding-right: 50px;
+    padding-left: 50px;
   }
 
   .field-name__name {

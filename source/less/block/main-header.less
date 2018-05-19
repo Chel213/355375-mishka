@@ -6,31 +6,37 @@
 .main-header__logo {
   margin: auto 0;
   padding: 22px 0;
+
   border-top: 1px solid rgba(68, 68, 68, 0.1);
   border-bottom: 1px solid rgba(68, 68, 68, 0.1);
 }
 
 .main-header__control-popup {
-  display: none;
   position: absolute;
   top: 30px;
   right: 30px;
+
+  display: none;
   width: 21px;
   height: 21px;
   padding: 0;
+
   border: none;
-  transition-duration: 0.5s;
   cursor: pointer;
+
+  transition-duration: 0.5s;
 }
 
 .main-header__control-popup.close {
   display: block;
+
   background: url("../img/icon-menu-close.svg") no-repeat;
   transform: rotate(180deg);
 }
 
 .main-header__control-popup.open {
   display: block;
+
   background: url("../img/icon-menu-open.svg") no-repeat center;
 }
 
@@ -49,7 +55,9 @@
     position: absolute;
     top: 22px;
     left: 50px;
+
     padding: 0;
+
     border: none;
   }
 }
@@ -61,8 +69,9 @@
   }
 
   .main-header__logo {
-    left: 50%;
     top: 8px;
+    left: 50%;
+
     margin-left: -74px;
   }
 }
