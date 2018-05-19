@@ -57,6 +57,10 @@
   }
 }
 
+.field-color__input:focus + .field-color__label::before {
+  border-color: #62d1ba;
+}
+
 .field-color__label {
   position: relative;
 
@@ -104,6 +108,7 @@
 
   &:active::after {
     background: url("../img/icon-tick.svg") no-repeat center;
+    background-size: 22px 16px;
   }
 }
 
@@ -153,6 +158,10 @@
 
       width: 50px;
       height: 50px;
+    }
+
+    &:active::after {
+      background-size: 33px 22px;
     }
   }
 

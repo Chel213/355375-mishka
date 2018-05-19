@@ -46,6 +46,10 @@
   }
 }
 
+.field-type__input:focus + .field-type__label::before {
+  border-color: #62d1ba;
+}
+
 .field-type__label {
   position: relative;
 
@@ -85,6 +89,10 @@
 
   &:hover::before {
     border-color: #62d1ba;
+
+    @media (hover: none) {
+      border-color: inherit;
+    }
   }
 
   &:active::before {
