@@ -134,4 +134,5 @@ gulp.task("serve", function () {
   gulp.watch("source/less/**/*.less", ["style"]);
   gulp.watch("source/*.html", ["htmlmin"]);
   gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch("source/js/*.js", ["minify"]);
 });

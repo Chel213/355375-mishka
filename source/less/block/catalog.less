@@ -96,7 +96,10 @@
   background: none;
   border: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
+    outline: none;
+
     & .catalog__button-buy-cart {
       opacity: 1;
 
@@ -199,8 +202,8 @@
     flex-direction: column;
     width: 316px;
     margin: 0;
-    margin-left: 50px;
     margin-bottom: 56px;
+    margin-left: 50px;
   }
 
   .catalog__item-name {
